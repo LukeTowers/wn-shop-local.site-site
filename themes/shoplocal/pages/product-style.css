@@ -1,0 +1,245 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #818CF8;
+    color: white;
+  }
+  
+  .nav-links a, .auth-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+  }
+  
+  .auth-links a {
+    background-color: #4F46E5;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  /* Search Bar */
+  .search-bar {
+    text-align: center;
+    margin: 15px;
+  }
+
+  .search-bar input {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Header */
+  .header {
+    
+    padding: 170px 70px;
+    background-image: url("pexels-olly-3769747.jpg");
+    background-repeat: no-repeat;
+    background-size: 1430px 500px;
+    color: black;
+  }
+  
+  .header h1 {
+   
+    top: 10px;
+    left: 100px;
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .header p {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
+  }
+  
+  /* Container */
+  .container {
+    display: flex;
+    padding: 20px;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 20%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  
+  .sidebar h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #4F46E5;
+  }
+  
+  .filter-section {
+    margin-bottom: 20px;
+  }
+  
+  .filter-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .filter-section input[type="range"] {
+    width: 100%;
+  }
+  
+  .filter-section p {
+    margin: 10px 0 0;
+    font-size: 0.9rem;
+  }
+  /* Item List */
+.item-list {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .item {
+    width: calc(25% - 20px); /* Default: 4 items per row */
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .item-frame {
+    border: 2px solid #818CF8;
+    border-radius: 8px;
+    padding: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .item img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .item h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .item p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .add-to-cart {
+    background-color: #a339ef; /* Indigo */
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .add-to-cart:hover {
+    background-color: #b894d1; /* Lighter Indigo */
+    transform: scale(1.1);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 1200px) {
+    .item {
+      width: calc(33.33% - 20px); /* 3 items per row for medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .item {
+      width: calc(50% - 20px); /* 2 items per row for tablets */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .item {
+      width: 100%; /* 1 item per row for mobile */
+    }
+  }
+  
+
+
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #818CF8;
+    color: white;
+    margin-top: 20px;
+  }
+
+  .cart-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.view-cart {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #1811e0; /* Orange color */
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.view-cart:hover {
+    background-color: #ff4500; /* Darker orange */
+    transform: scale(1.1);
+}
+
+/* Arrow below the button */
+.arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #ff6600;
+    margin: 10px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.view-cart:hover + .arrow-down {
+    border-top-color: #ff4500;
+    transform: scale(1.1);
+}
+

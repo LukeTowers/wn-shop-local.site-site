@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Local</title>
+  <link rel="stylesheet" href="product-style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1 style="font-family:Tangerine">Shop Local</h1>
+        <p>Discover unique treasures from local artisans and businesses.</p>
+      </header>
+
+    <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" placeholder="Search for products...">
+  </div>
+
+  
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Clothing</a>
+      <a href="#">Dresses</a>
+      <a href="#">Shoes</a>
+      <a href="#">Bags</a>
+      <a href="#">Accessories</a>
+      <a href="#">Beauty</a>
+      <a href="#">Trends</a>
+      <a href="#">Outfits</a>
+      <a href="#">Brands</a>
+      <a href="#">Fashion Inspiration</a>
+    </div>
+    <div class="auth-links">
+      <a href="Log-in.htm">Login</a>
+      <a href="#">Sign Up</a>
+    </div>
+  </nav>
+
+
+  
+  
+
+  
+
+  <!-- Header with Catchy Line -->
+ 
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Filter Sidebar -->
+    <aside class="sidebar">
+        <h3>Filters</h3>
+      
+        <!-- Price Range Filter -->
+        <div class="filter-section">
+          <label for="price-range">Price Range:</label>
+          <input type="range" id="price-range" min="0" max="100" value="50">
+          <p>Selected Price: $<span id="selected-price">50</span></p>
+        </div>
+      
+        <!-- Size Filter -->
+        <div class="filter-section">
+          <label for="size">Size:</label>
+          <select id="size">
+            <option value="">Select Size</option>
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+          </select>
+        </div>
+      
+        <!-- Categories Filter -->
+        <div class="filter-section">
+          <label for="category">Category:</label>
+          <select id="category">
+            <option value="">Select Category</option>
+            <option value="clothing">Clothing</option>
+            <option value="footwear">Footwear</option>
+            <option value="accessories">Accessories</option>
+            <option value="electronics">Electronics</option>
+            <option value="food-beverages">Food & Beverages</option>
+            <option value="beauty-personal-care">Beauty & Personal Care</option>
+            <option value="gifts">Gifts</option>
+          </select>
+        </div>
+      </aside>
+      
+
+    <!-- Product Listings -->
+    <main class="item-list">
+      <div class="item">
+        <div class="item-frame">
+          <img src="cap.jpeg" alt="Item 1">
+        </div>
+        <h3>Item 1</h3>
+        <p>$20.00</p>
+        <button class="add-to-cart" data-name="cap" data-price="35">Add to Cart</button>
+      </div>
+      <div class="item">
+        <div class="item-frame">
+          <img src="cargo.webp" alt="Item 2">
+        </div>
+        <h3>Item 2</h3>
+        <p>$25.00</p>
+        <button class="add-to-cart" data-name="cargo" data-price="35">Add to Cart</button>
+      </div>
+      <!-- Add 7-8 more items here -->
+      <div class="item">
+        <div class="item-frame">
+          <img src="pants.jpeg" alt="Item 10">
+        </div>
+        <h3>Item 10</h3>
+        <p>$30.00</p>
+        <button class="add-to-cart" data-name="pants" data-price="35">Add to Cart</button>
+      </div>
+
+      <div class="item">
+        <div class="item-frame">
+          <img src="shirt.jpeg" alt="Item 10">
+        </div>
+        <h3>Item 10</h3>
+        <p>$30.00</p>
+        <button class="add-to-cart" data-name="shirt" data-price="35">Add to Cart</button>
+      </div>
+
+      <div class="item">
+        <div class="item-frame">
+          <img src="shirt.webp" alt="Item 10">
+        </div>
+        <h3>Item 10</h3>
+        <p>$30.00</p>
+        <button class="add-to-cart" data-name="shirt" data-price="35">Add to Cart</button>
+      </div>
+
+      <div class="item">
+        <div class="item-frame">
+          <img src="shoe.jpeg" alt="Item 10">
+        </div>
+        <h3>Item 10</h3>
+        <p>$30.00</p>
+        <button class="add-to-cart" data-name="shoe" data-price="35">Add to Cart</button>
+      </div>
+
+      <div class="item">
+        <div class="item-frame">
+          <img src="sweater.webp" alt="Item 10">
+        </div>
+        <h3>Item 10</h3>
+        <p>$30.00</p>
+        <button class="add-to-cart" data-name="Sweater" data-price="35">Add to Cart</button>
+      </div>
+
+      <div class="item">
+        <div class="item-frame">
+          <img src="dress.webp" alt="Item 10">
+        </div>
+        <h3>Item 10</h3>
+        <p>$30.00</p>
+        <button class="add-to-cart" data-name="Dress" data-price="35">Add to Cart</button>
+      </div>
+      <div class="item">
+        <div class="item-frame">
+          <img src="hoodie.webp" alt="Item 10">
+        </div>
+        <h3>Item 10</h3>
+        <p>$30.00</p>
+        <button class="add-to-cart" data-name="Hoodie" data-price="35">Add to Cart</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- View Cart Button -->
+  <div class="cart-container">
+    <a href="cart.html" class="view-cart">View Cart</a>
+  </div>
+  
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Shop Local. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Price Range -->
+  <script>
+    const priceRange = document.getElementById('price-range');
+    const selectedPrice = document.getElementById('selected-price');
+    priceRange.addEventListener('input', () => {
+      selectedPrice.textContent = priceRange.value;
+    });
+  </script>
+
+   
+
+</body>
+</html>
