@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Your Account - Retailer Registration</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
+title="Register as a Retailer"
+url="/register-retailer"
+layout="default"
+==
+<?php
+function onStart() {
+    $this->addCss('/themes/shoplocal/assets/src/css/page-retailer-form.css');
+}
+?>
+==
+<div class="page-content">
     <div class="form-container">
         <h1>Create Your Account</h1>
         <p class="subtext">Join our platform and showcase your business to the world.</p>
@@ -66,20 +65,6 @@
                 </div>
             </div>
 
-            <!-- Payment Gateway -->
-            <div class="form-section">
-                <h2>Preferred Payment Gateway</h2>
-                <div class="input-group">
-                    <label for="payment-gateway">Select Payment Gateway:</label>
-                    <select id="payment-gateway" name="payment-gateway" required>
-                        <option value="">Select an option</option>
-                        <option value="stripe">Stripe</option>
-                        <option value="square">Square</option>
-                        <option value="paypal">PayPal</option>
-                    </select>
-                </div>
-            </div>
-
             <!-- Product Categories -->
             <div class="form-section">
                 <h2>Primary Product Categories</h2>
@@ -93,15 +78,6 @@
                     <label><input type="checkbox" name="product-category" value="gifts"> Gifts</label>
                     <label><input type="checkbox" name="product-category" value="other"> Other (Please specify):</label>
                     <input type="text" id="other-category" name="other-category" placeholder="Specify other category">
-                </div>
-            </div>
-
-            <!-- Legal & Compliance -->
-            <div class="form-section">
-                <h2>Legal & Compliance</h2>
-                <div class="input-group">
-                    <label for="license-number">Business License/Registration Number:</label>
-                    <input type="text" id="license-number" name="license-number" placeholder="Enter your license/registration number">
                 </div>
             </div>
 
@@ -120,6 +96,4 @@
             </div>
         </form>
     </div>
-</body>
-
-</html>
+</div>

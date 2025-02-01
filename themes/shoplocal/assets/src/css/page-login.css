@@ -1,5 +1,5 @@
 /* General Styles */
-body {
+.page-content {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #5C6BC0, #af86e9); /* Gradient background */
     display: flex;
@@ -63,7 +63,7 @@ body {
 }
 
 .input-group input {
-    width: 80%;
+    width: 100%;
     padding: 0.75rem;
     border: 1px solid #ddd;
     border-radius: 8px;
