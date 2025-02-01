@@ -1,0 +1,21 @@
+==
+<!-- Fathom - beautiful, simple website analytics -->
+<script src="https://cdn.usefathom.com/script.js" data-site="NZXZIMWJ" defer></script>
+<script>
+    window.addEventListener('load', (event) => {
+        {# if (typeof fathom === 'undefined') {
+            {{ fathomJs | raw }}
+        } #}
+        document.querySelectorAll('.record-card a').forEach(item => {
+            item.addEventListener('click', event => {
+                let linkType = item.dataset.linkType;
+                if (linkType) {
+                    let record = item.closest('.record-card').dataset.record;
+                    if (fathom) {
+                        fathom.trackEvent(`${linkType} clicked: ${record}`);
+                    }
+                }
+            });
+        });
+    });
+</script>

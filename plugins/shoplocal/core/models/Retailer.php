@@ -88,6 +88,10 @@ class Retailer extends Model
         'contacts' => [
             RetailerContact::class
         ],
+        'url_contacts' => [
+            RetailerContact::class,
+            'scope' => 'url',
+        ],
     ];
     public $hasOneThrough = [];
     public $hasManyThrough = [];
@@ -107,4 +111,54 @@ class Retailer extends Model
         ],
     ];
     public $attachMany = [];
+
+    public function scopeAvailable($query)
+    {
+        return $query;
+    }
+
+    /**
+     * Accessor for $this->logo_url
+     */
+    public function getLogoUrlAttribute(): string
+    {
+        if ($this->logo) {
+            return $this->logo->getPath();
+        }
+
+        return 'https://ui-avatars.com/api/?name=' . urlencode($this->name) . '&size=200';
+    }
+
+    /**
+     * Accessor for $this->site_url
+     */
+    public function getSiteUrlAttribute(): string
+    {
+        $host = parse_url(config('app.url'), PHP_URL_HOST);
+        return 'https://' . $this->code . '.' . $host;
+    }
+
+    /**
+     * Accessor for $this->email
+     */
+    public function getEmailAttribute(): ?string
+    {
+        return $this->contacts->where('type', 'email')->sortByDesc('updated_at')->first()->value ?? null;
+    }
+
+    /**
+     * Accessor for $this->address
+     */
+    public function getAddressAttribute(): ?RetailerContact
+    {
+        return $this->contacts->where('type', 'address')->sortByDesc('updated_at')->first() ?? null;
+    }
+
+    /**
+     * Accessor for $this->phone
+     */
+    public function getPhoneAttribute(): ?RetailerContact
+    {
+        return $this->contacts->where('type', 'phone')->sortByDesc('updated_at')->first() ?? null;
+    }
 }

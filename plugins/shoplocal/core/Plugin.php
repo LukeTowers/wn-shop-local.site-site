@@ -4,6 +4,7 @@ namespace ShopLocal\Core;
 
 use Backend;
 use Backend\Models\UserRole;
+use ShopLocal\Core\Components\ListRetailers;
 use System\Classes\PluginBase;
 
 /**
@@ -46,7 +47,7 @@ class Plugin extends PluginBase
     public function registerComponents(): array
     {
         return [
-            \ShopLocal\Core\Components\ListRetailers::class => 'listRetailers',
+            ListRetailers::class => 'listRetailers',
         ];
     }
 

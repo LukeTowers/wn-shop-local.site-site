@@ -1,21 +1,7 @@
-        <!-- Scripts -->
+<footer class="p-8 bg-gray-900 text-gray-300 text-sm">
+    <div class="border-t border-gray-800 pt-4 text-center">
+        <a href="https://usefathom.com/ref/8BVKSN" target="_blank">This website doesn't track your personal data. Analytics provided by Fathom Analytics</a>
+    </div>
+</footer>
 
-        {# jQuery AJAX Framework #}
-        <script src="{{ [
-            '@jquery',
-            '@framework',
-            '@framework.extras',
-        ] | theme }}"></script>
-
-        {# Vite extracted assets #}
-        {{ vite(['assets/src/js/theme-shoplocal.js'], 'theme-shoplocal') }}
-
-        {% scripts %}
-
-        {% flash %}
-            <p data-control="flash-message" data-interval="7" class="flashmessage {{ type }}">
-                {{ message }}
-            </p>
-        {% endflash %}
-    </body>
-</html>
+{% partial 'site/site-footer' %}

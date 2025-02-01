@@ -1,0 +1,5 @@
+{
+    "require": {
+        "propaganistas/laravel-phone": "~5.1"
+    }
+}
