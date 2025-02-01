@@ -56,132 +56,132 @@ function onStart() {
                 {% endfor %}
             </div>
 
-            <!-- Order Summary -->
-            <div class="mt-6">
-                <div class="flex justify-between text-lg font-semibold">
-                    <p>Subtotal:</p>
-                    <p>$35.00</p>
-                </div>
-                <div class="flex justify-between text-lg font-semibold mt-2">
-                    <p>Shipping:</p>
-                    <p>$5.00</p>
-                </div>
-                <div class="flex justify-between text-xl font-bold mt-4">
-                    <p>Total:</p>
-                    <p>$40.00</p>
-                </div>
-            </div>
         </div>
 
         <!-- Shipping Information -->
         <div>
             <h3 class="text-xl font-semibold mt-8">Shipping Information</h3>
-            <!-- Selection Containers -->
-            <div class="flex space-x-4 pt-4">
-                <!-- Local Pickup Container -->
-                <div id="pickupContainer" onclick="selectMethod('pickup')"
-                    class="p-4 border-2 border-gray-300 rounded-lg cursor-pointer w-1/2 text-center transition-all">
-                    <h2 class="text-lg font-semibold">Local Pickup</h2>
-                    <p class="text-gray-500">Pick up from the store.</p>
-                </div>
-
-                <!-- Delivery Container -->
-                <div id="deliveryContainer" onclick="selectMethod('delivery')"
-                    class="p-4 border-2 border-gray-300 rounded-lg cursor-pointer w-1/2 text-center transition-all">
-                    <h2 class="text-lg font-semibold">Delivery</h2>
-                    <p class="text-gray-500">Get it delivered to you.</p>
-                </div>
-            </div>
-
-            <div class="flex items-center justify-evenly space-x-4">
-                <form class="mt-4 space-y-4">
-                    <div>
-                        <label class="block text-sm font-medium">Full Name</label>
-                        <input type="text"
-                            class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
-                            placeholder="Enter your full name">
-                    </div>
-
-                    <div>
-                        <label class="block text-sm font-medium">Address</label>
-                        <input type="text"
-                            class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
-                            placeholder="Enter your address">
-                    </div>
-
-                    <div>
-                        <label class="block text-sm font-medium">City</label>
-                        <input type="text"
-                            class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
-                            placeholder="City">
-                    </div>
-
-                    <div class="flex space-x-4">
-                        <div class="w-1/2">
-                            <label class="block text-sm font-medium">State/Province</label>
+            <div class="flex flex-col">
+                <form class="mt-4 flex items-center justify-center w-full space-x-4">
+                    <div class="w-full space-y-2">
+                        <div>
+                            <label class="block text-sm font-medium">Full Name</label>
                             <input type="text"
                                 class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
-                                placeholder="State">
+                                placeholder="Enter your full name">
                         </div>
-                        <div class="w-1/2">
-                            <label class="block text-sm font-medium">Postal Code</label>
+
+                        <div>
+                            <label class="block text-sm font-medium">Phone Number</label>
                             <input type="text"
                                 class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
-                                placeholder="Postal Code">
+                                placeholder="Enter your phone number">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium">Email</label>
+                            <input type="email"
+                                class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
+                                placeholder="Enter your email">
                         </div>
                     </div>
+                    <div class="w-full space-y-2">
+                        <div class="flex space-x-4">
+                            <div class="w-1/2">
+                                <label class="block text-sm font-medium">State/Province</label>
+                                <input type="text"
+                                    class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
+                                    placeholder="State">
+                            </div>
+                            <div class="w-1/2">
+                                <label class="block text-sm font-medium">Postal Code</label>
+                                <input type="text"
+                                    class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
+                                    placeholder="Postal Code">
+                            </div>
+                        </div>
 
+                        <div>
+                            <label class="block text-sm font-medium">Address</label>
+                            <input type="text"
+                                class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
+                                placeholder="Enter your address">
+                        </div>
 
-                    <div>
-                        <label class="block text-sm font-medium">Phone Number</label>
-                        <input type="text"
-                            class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
-                            placeholder="Enter your phone number">
-                    </div>
+                        <div>
+                            <label class="block text-sm font-medium">City</label>
+                            <input type="text"
+                                class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
+                                placeholder="City">
+                        </div>
 
-                    <div>
-                        <label class="block text-sm font-medium">Email</label>
-                        <input type="email"
-                            class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
-                            placeholder="Enter your email">
                     </div>
 
                 </form>
+                <!-- Selection Containers -->
 
+                <h3 class="text-xl font-semibold mt-8">Shipping Method</h3>
+                <div class="flex space-x-4 pt-4">
+                    <!-- Local Pickup Container -->
+                    <div id="pickupContainer" onclick="selectMethod('pickup')"
+                        class="smooth p-4 border-2 border-gray-300 rounded-lg cursor-pointer w-1/2 text-center transition-all">
+                        <h2 class="text-lg font-semibold">Local Pickup</h2>
+                        <p class="text-gray-500">Pick up from the store.</p>
+                    </div>
+
+                    <!-- Delivery Container -->
+                    <div id="deliveryContainer" onclick="selectMethod('delivery')"
+                        class="smooth p-4 border-2 border-gray-300 rounded-lg cursor-pointer w-1/2 text-center transition-all">
+                        <h2 class="text-lg font-semibold">Delivery</h2>
+                        <p class="text-gray-500">Get it delivered to you.</p>
+                    </div>
+                </div>
                 <!-- Payment Section -->
                 <div>
-                    <h3 class="text-xl font-semibold my-8 text-center">Payment Method</h3>
+                    <h3 class="text-xl font-semibold mt-8">Payment Method</h3>
                     <div class="mt-4 h-full flex flex-col items-center space-y-5">
-                        <div id="payInPersonContainer" onclick="handleLocalPay()"
-                            class="p-4 border-2 border-gray-300 rounded-lg cursor-pointer w-2/3 text-center transition-all">
-                            <h2 class="text-lg font-semibold">Pay in Person</h2>
-                            <p class="text-gray-500">Pay when you come by!</p>
+                        <div class="w-full flex justify-center items-center space-x-4">
+                            <div id="payInPersonContainer" onclick="handleLocalPay()"
+                                class="smooth p-4 border-2 border-gray-300 rounded-lg cursor-pointer w-2/3 text-center transition-all">
+                                <h2 class="text-lg font-semibold">Pay in Person</h2>
+                                <p class="text-gray-500">Pay when you come by!</p>
+                            </div>
+
+                            <div id="payWithCredit" onclick="handleLocalPay()"
+                                class="smooth p-4 border-2 border-gray-300 rounded-lg cursor-pointer w-2/3 text-center transition-all">
+                                <h2 class="text-lg font-semibold">Pay With Credit</h2>
+                                <p class="text-gray-500">Pay with credit and pick up your delivery</p>
+                            </div>
                         </div>
 
-                        <div class="relative w-96 h-60 rounded-xl bg-indigo-500 overflow-hidden" id="card">
-                            <div class="absolute bottom-3 left-5 z-10">
-                                <label class="block text-xs font-medium text-white">Card Holders Name</label>
-                                <input type="text"
-                                    class="card-input w-full bg-transparent border-0 focus:ring-0 smooth placeholder-white text-white"
-                                    placeholder="John Doe">
-                            </div>
-                            <div class="absolute w-full top-1/2 -traslate-x-1/2 -translate-y-1/2 z-10">
-                                <input type="text"
-                                    class="card-input w-full text-3xl bg-transparent border-0 focus:ring-0 smooth placeholder-white text-white"
-                                    placeholder="1234 5678 9012 3456" oninput="handleCardNumberInput(event)">
 
-                            </div>
-                            <div class="absolute bottom-3 -right-24 z-10">
-                                <label class="block text-xs font-medium text-white">Expiry Date</label>
-                                <input type="text"
-                                    class="card-input w-full bg-transparent border-0 focus:ring-0 smooth placeholder-white text-white"
-                                    placeholder="MM/YY">
-                            </div>
+                        <div class="w-full flex items-center justify-center">
+                            <div class="relative w-96 h-60 rounded-xl bg-indigo-500 overflow-hidden smooth" id="card">
+                                <div class="absolute bottom-3 left-5 z-10">
+                                    <label class="block text-xs font-medium text-white">Card Holders Name</label>
+                                    <input type="text"
+                                        class="card-input w-full bg-transparent border-0 focus:ring-0 smooth placeholder-white text-white"
+                                        placeholder="John Doe">
+                                </div>
+                                <div class="absolute w-full top-1/2 -traslate-x-1/2 -translate-y-1/2 z-10">
+                                    <input type="text"
+                                        class="card-input w-full text-3xl bg-transparent border-0 focus:ring-0 smooth placeholder-white text-white"
+                                        placeholder="1234 5678 9012 3456" oninput="handleCardNumberInput(event)">
 
-                            <div
-                                class="absolute -bottom-5 -left-5 bg-yellow-400 rounded-full w-32 h-32 mix-blend-overlay">
-                            </div>
-                            <div class="absolute top-5 right-5 bg-green-500 rounded-full w-24 h-24 mix-blend-overlay">
+                                </div>
+                                <div class="absolute bottom-3 -right-24 z-10">
+                                    <label class="block text-xs font-medium text-white">Expiry Date</label>
+                                    <input type="text"
+                                        class="card-input w-full bg-transparent border-0 focus:ring-0 smooth placeholder-white text-white"
+                                        placeholder="MM/YY">
+                                </div>
+
+                                <div
+                                    class="absolute -bottom-5 -left-5 bg-yellow-400 rounded-full w-32 h-32 mix-blend-overlay">
+                                </div>
+                                <div
+                                    class="absolute top-5 right-5 bg-green-500 rounded-full w-24 h-24 mix-blend-overlay">
+                                </div>
                             </div>
                         </div>
 
@@ -191,7 +191,25 @@ function onStart() {
                 </div>
             </div>
         </div>
-
+        <!-- Order Summary -->
+        <div class="mt-6">
+            <div class="flex justify-between text-lg font-semibold">
+                <p>Subtotal:</p>
+                <p>$35.00</p>
+            </div>
+            <div id="deliveryFee" class="flex justify-between text-lg font-semibold mt-2">
+                <p>Delivery:</p>
+                <p>$5.00</p>
+            </div>
+            <div class="flex justify-between text-lg font-semibold mt-2">
+                <p>Platform Fee:</p>
+                <p>$1.00</p>
+            </div>
+            <div class="flex justify-between text-xl font-bold mt-4">
+                <p>Total:</p>
+                <p id="total">$41.00</p>
+            </div>
+        </div>
         <!-- Place Order Button -->
         <button
             class="w-full mt-6 bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400">
@@ -212,45 +230,45 @@ function onStart() {
         isLocalPay = false;
         const pickupContainer = document.getElementById('pickupContainer');
         const deliveryContainer = document.getElementById('deliveryContainer');
-        const cardInputs = document.querySelectorAll('.card-input');
         const localPay = document.getElementById('payInPersonContainer');
+        const deliveryFee = document.getElementById('deliveryFee');
         const card = document.getElementById('card');
+        const total = document.getElementById('total');
         if (method === 'pickup') {
             pickupContainer.classList.add('border-indigo-500');
             deliveryContainer.classList.remove('border-indigo-500');
             localPay.classList.remove("hidden")
+            deliveryFee.classList.add('hidden');
+            total.innerText = "36.00"
         }
         else {
             deliveryContainer.classList.add('border-indigo-500');
             pickupContainer.classList.remove('border-indigo-500');
             localPay.classList.add("hidden")
-            cardInputs.forEach(input => {
-                input.disabled = false;
-            });
-            card.classList.remove('opacity-60');
+            card.classList.remove('hidden');
+            deliveryFee.classList.remove('hidden');
+            total.innerText = "41.00"
         }
     }
 
 
     const handleLocalPay = () => {
         const localPay = document.getElementById('payInPersonContainer');
+        const localPayCredit = document.getElementById('payWithCredit');
         const card = document.getElementById('card');
-        const cardInputs = document.querySelectorAll('.card-input');
         isLocalPay = !isLocalPay;
         if (isLocalPay) {
             localPay.classList.add('border-indigo-500');
-            card.classList.add('opacity-60');
-            cardInputs.forEach(input => {
-                input.disabled = true;
-            });
+            localPayCredit.classList.remove('border-indigo-500');
+            card.classList.add('hidden');
         }
         else {
             localPay.classList.remove('border-indigo-500');
-            card.classList.remove('opacity-60');
-            cardInputs.forEach(input => {
-                input.disabled = false;
-            });
+            localPayCredit.classList.add('border-indigo-500');
+            card.classList.remove('hidden');
         }
     }
+
+    selectMethod('delivery')
 
 </script>
