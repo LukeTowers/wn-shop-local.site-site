@@ -21,12 +21,12 @@ return [
             'label_plural' => 'Retailers',
         ],
         'retailercontact' => [
-            'label' => 'Retailer Contact',
-            'label_plural' => 'Retailer Contacts',
+            'label' => 'Contact',
+            'label_plural' => 'Contacts',
         ],
         'retailercategory' => [
-            'label' => 'Retailer Category',
-            'label_plural' => 'Retailer Categories',
+            'label' => 'Category',
+            'label_plural' => 'Categories',
         ],
     ],
 ];
