@@ -2,6 +2,7 @@
 
 namespace ShopLocal\Core\Models;
 
+use Winter\Storm\Database\Factories\HasFactory;
 use Winter\Storm\Database\Model;
 
 /**
@@ -10,6 +11,7 @@ use Winter\Storm\Database\Model;
 class RetailerContact extends Model
 {
     use \Winter\Storm\Database\Traits\Validation;
+    use HasFactory;
 
     /**
      * @var string The database table used by the model.

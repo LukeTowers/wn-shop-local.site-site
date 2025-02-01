@@ -3,6 +3,7 @@
 namespace ShopLocal\Core\Models;
 
 use System\Models\File;
+use Winter\Storm\Database\Factories\HasFactory;
 use Winter\Storm\Database\Model;
 
 /**
@@ -10,7 +11,9 @@ use Winter\Storm\Database\Model;
  */
 class Retailer extends Model
 {
+    use \Winter\Storm\Database\Traits\Sluggable;
     use \Winter\Storm\Database\Traits\Validation;
+    use HasFactory;
 
     /**
      * @var string The database table used by the model.
@@ -21,6 +24,13 @@ class Retailer extends Model
      * @var array Behaviors implemented by this model class
      */
     public $implement = ['@LukeTowers.EasyAudit.Behaviors.TrackableModel'];
+
+    /**
+     * @var array List of attributes to automatically generate unique URL names (slugs) for.
+     */
+    protected $slugs = [
+        'code' => 'name',
+    ];
 
     /**
      * @var array Guarded fields

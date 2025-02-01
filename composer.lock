@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6d628ff7186543d5c6da811abfa9e3cd",
+    "content-hash": "928b90b44d2c6142ffa4aa23dba618e9",
     "packages": [
         {
             "name": "assetic/framework",
-            "version": "v3.1.2",
+            "version": "v3.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/assetic-php/assetic.git",
-                "reference": "da2b0131d9e472c6f623c7c8aaa5ed4ab8f9a1f1"
+                "reference": "064d27426d7d338c2286bc50ef5e2a6b8e59e126"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/assetic-php/assetic/zipball/da2b0131d9e472c6f623c7c8aaa5ed4ab8f9a1f1",
-                "reference": "da2b0131d9e472c6f623c7c8aaa5ed4ab8f9a1f1",
+                "url": "https://api.github.com/repos/assetic-php/assetic/zipball/064d27426d7d338c2286bc50ef5e2a6b8e59e126",
+                "reference": "064d27426d7d338c2286bc50ef5e2a6b8e59e126",
                 "shasum": ""
             },
             "require": {
@@ -91,9 +91,9 @@
             ],
             "support": {
                 "issues": "https://github.com/assetic-php/assetic/issues",
-                "source": "https://github.com/assetic-php/assetic/tree/v3.1.2"
+                "source": "https://github.com/assetic-php/assetic/tree/v3.1.3"
             },
-            "time": "2024-07-14T05:29:40+00:00"
+            "time": "2025-02-01T05:23:09+00:00"
         },
         {
             "name": "barryvdh/laravel-debugbar",
@@ -7599,16 +7599,16 @@
         },
         {
             "name": "winter/storm",
-            "version": "v1.2.7",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wintercms/storm.git",
-                "reference": "99065c0e430941ea29515c7329cc9bc838305eca"
+                "reference": "b9b5aae924eaa4be17a10c7c8138732328be6b7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wintercms/storm/zipball/99065c0e430941ea29515c7329cc9bc838305eca",
-                "reference": "99065c0e430941ea29515c7329cc9bc838305eca",
+                "url": "https://api.github.com/repos/wintercms/storm/zipball/b9b5aae924eaa4be17a10c7c8138732328be6b7f",
+                "reference": "b9b5aae924eaa4be17a10c7c8138732328be6b7f",
                 "shasum": ""
             },
             "require": {
@@ -7660,6 +7660,7 @@
                 "ext-pdo_pgsql": "Required to use PostgreSQL databases",
                 "ext-pdo_sqlite": "Required to use SQLite databases"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -7706,7 +7707,7 @@
                 "winter"
             ],
             "support": {
-                "source": "https://github.com/wintercms/storm/tree/v1.2.7"
+                "source": "https://github.com/wintercms/storm/tree/develop"
             },
             "funding": [
                 {
@@ -7718,20 +7719,20 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2024-12-04T21:43:34+00:00"
+            "time": "2025-02-01T06:45:52+00:00"
         },
         {
             "name": "winter/wn-backend-module",
-            "version": "v1.2.7",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wintercms/wn-backend-module.git",
-                "reference": "22f3551b76f8b56a8024bb888d33c6c5174d5b75"
+                "reference": "17ab13a0d4cd6c64dd315394deecb06f29342494"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wintercms/wn-backend-module/zipball/22f3551b76f8b56a8024bb888d33c6c5174d5b75",
-                "reference": "22f3551b76f8b56a8024bb888d33c6c5174d5b75",
+                "url": "https://api.github.com/repos/wintercms/wn-backend-module/zipball/17ab13a0d4cd6c64dd315394deecb06f29342494",
+                "reference": "17ab13a0d4cd6c64dd315394deecb06f29342494",
                 "shasum": ""
             },
             "require": {
@@ -7742,6 +7743,7 @@
             "replace": {
                 "october/backend": "1.1.*"
             },
+            "default-branch": true,
             "type": "winter-module",
             "autoload": {
                 "psr-4": {
@@ -7777,7 +7779,7 @@
                 "winter cms"
             ],
             "support": {
-                "source": "https://github.com/wintercms/wn-backend-module/tree/v1.2.7"
+                "source": "https://github.com/wintercms/wn-backend-module/tree/develop"
             },
             "funding": [
                 {
@@ -7789,20 +7791,20 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2024-12-04T20:52:22+00:00"
+            "time": "2025-01-29T22:22:02+00:00"
         },
         {
             "name": "winter/wn-cms-module",
-            "version": "v1.2.7",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wintercms/wn-cms-module.git",
-                "reference": "35fc0701d87760b1339c3a909729b5bf7c1a62b5"
+                "reference": "728bc24221a0386ea6c8782c2576fe112939f77f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wintercms/wn-cms-module/zipball/35fc0701d87760b1339c3a909729b5bf7c1a62b5",
-                "reference": "35fc0701d87760b1339c3a909729b5bf7c1a62b5",
+                "url": "https://api.github.com/repos/wintercms/wn-cms-module/zipball/728bc24221a0386ea6c8782c2576fe112939f77f",
+                "reference": "728bc24221a0386ea6c8782c2576fe112939f77f",
                 "shasum": ""
             },
             "require": {
@@ -7813,6 +7815,7 @@
             "replace": {
                 "october/cms": "1.1.*"
             },
+            "default-branch": true,
             "type": "winter-module",
             "autoload": {
                 "psr-4": {
@@ -7848,7 +7851,7 @@
                 "winter cms"
             ],
             "support": {
-                "source": "https://github.com/wintercms/wn-cms-module/tree/v1.2.7"
+                "source": "https://github.com/wintercms/wn-cms-module/tree/develop"
             },
             "funding": [
                 {
@@ -7860,7 +7863,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2024-11-25T17:02:39+00:00"
+            "time": "2025-01-25T04:10:26+00:00"
         },
         {
             "name": "winter/wn-debugbar-plugin",
@@ -8204,16 +8207,16 @@
         },
         {
             "name": "winter/wn-system-module",
-            "version": "v1.2.7",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wintercms/wn-system-module.git",
-                "reference": "ebe5d5dfe49857c675d30e00f751f91df38cf81e"
+                "reference": "491805bff7b224eb9a3e5bbbcf7c680c46bcbc52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wintercms/wn-system-module/zipball/ebe5d5dfe49857c675d30e00f751f91df38cf81e",
-                "reference": "ebe5d5dfe49857c675d30e00f751f91df38cf81e",
+                "url": "https://api.github.com/repos/wintercms/wn-system-module/zipball/491805bff7b224eb9a3e5bbbcf7c680c46bcbc52",
+                "reference": "491805bff7b224eb9a3e5bbbcf7c680c46bcbc52",
                 "shasum": ""
             },
             "require": {
@@ -8225,6 +8228,7 @@
             "replace": {
                 "october/system": "1.1.*"
             },
+            "default-branch": true,
             "type": "winter-module",
             "autoload": {
                 "psr-4": {
@@ -8260,7 +8264,7 @@
                 "winter cms"
             ],
             "support": {
-                "source": "https://github.com/wintercms/wn-system-module/tree/v1.2.7"
+                "source": "https://github.com/wintercms/wn-system-module/tree/develop"
             },
             "funding": [
                 {
@@ -8272,7 +8276,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2024-12-04T21:26:45+00:00"
+            "time": "2025-02-01T06:46:31+00:00"
         },
         {
             "name": "winter/wn-tailwindui-plugin",
@@ -10413,15 +10417,26 @@
             "time": "2024-03-03T12:36:25+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "winter/storm",
+            "version": "dev-develop",
+            "alias": "1.2",
+            "alias_normalized": "1.2.0.0"
+        }
+    ],
     "minimum-stability": "dev",
     "stability-flags": {
         "luketowers/wn-easyaudit-plugin": 20,
+        "winter/storm": 20,
+        "winter/wn-backend-module": 20,
+        "winter/wn-cms-module": 20,
         "winter/wn-debugbar-plugin": 20,
         "winter/wn-excel-plugin": 20,
         "winter/wn-ignition-plugin": 20,
         "winter/wn-seo-plugin": 20,
         "winter/wn-sitemap-plugin": 20,
+        "winter/wn-system-module": 20,
         "winter/wn-tailwindui-plugin": 20
     },
     "prefer-stable": true,
