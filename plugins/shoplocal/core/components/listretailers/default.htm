@@ -44,7 +44,9 @@
         {% endfor %}
     </ul>
 </div>
-{% if records.count() == 1 %}
+{% if records.count() == 1 and records.first().products.count() %}
+    {% partial "@products" products=records.first().products %}
+
     {% set record = records.first() %}
     {# {% if record.metadata.staff.members is not empty %}
         <div class="py-8 px-2 bg-gray-100">

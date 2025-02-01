@@ -49,7 +49,7 @@ class Retailers extends Controller
     public function update_onGenerateDummyProductData($id)
     {
         $retailer = Retailer::find($id);
-        $count = 10;
+        $count = 12;
 
         if (!$retailer) {
             throw new \Winter\Storm\Exception\ApplicationException("Retailer not found.");
