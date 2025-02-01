@@ -92,6 +92,9 @@ class Retailer extends Model
             RetailerContact::class,
             'scope' => 'url',
         ],
+        'products' => [
+            Product::class,
+        ],
     ];
     public $hasOneThrough = [];
     public $hasManyThrough = [];

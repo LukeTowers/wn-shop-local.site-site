@@ -20,6 +20,10 @@ fields:
         span: auto
 
 tabs:
+    icons:
+        Contact: icon-location-dot
+        Products: icon-boxes
+
     fields:
         city:
             label: City
@@ -67,6 +71,10 @@ tabs:
             type: relationmanager
             span: full
             tab: Contact
+        products:
+            type: relationmanager
+            span: full
+            tab: Products
 
 
 secondaryTabs:
