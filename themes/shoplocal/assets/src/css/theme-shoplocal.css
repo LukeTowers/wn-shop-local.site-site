@@ -7,3 +7,7 @@
         @apply duration-300 ease-in-out transition-all
     }
 }
+
+.word-spacing{
+    word-spacing: 0.2em;
+}

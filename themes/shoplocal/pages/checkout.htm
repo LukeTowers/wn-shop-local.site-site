@@ -1,0 +1,256 @@
+title = "Checkout"
+url = "/checkout"
+layout = "default"
+==
+<?php
+function onStart() {
+    $this['cart']=[
+        [
+            'id' => 0,
+            'name'=> 'Product 1',
+            'price' => 10.00,
+            'quantity' => 1,
+        ],
+        [
+            'id' => 1,
+            'name'=> 'Product 2',
+            'price' => 20.00,
+            'quantity' => 2,
+        ],
+        [
+            'id' => 2,
+            'name'=> 'Product 3',
+            'price' => 60.00,
+            'quantity' => 1,
+        ],
+    ];
+}
+?>
+==
+
+
+<div class="w-full h-full">
+    <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+        <h2 class="text-4xl font-semibold mb-6 text-center">Checkout</h2>
+
+        <div>
+            <!-- Items in Cart -->
+            <div id="checkout-items" class="space-y-6">
+                {% for item in cart %}
+                <div class="flex items-end border-b pb-4 space-x-4">
+                    <div class="flex space-x-4">
+                        <!-- Image -->
+                        <a href="retailer/{{ item.id }}" class="w-24 h-24 object-cover rounded-lg bg-indigo-500">
+                        </a>
+
+                    </div>
+                    <div clas="flex flex-col">
+                        <div>
+                            <h4 class="font-semibold">{{ item.name }}</h4>
+                            <p class="text-xs text-gray-500">Price: ${{ item.price }}</p>
+                            <p class="text-xs">Quantity: {{ item.quantity }}</p>
+                        </div>
+                        <p class="text-xl font-semibold pt-3">${{ item.price * item.quantity }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- Order Summary -->
+            <div class="mt-6">
+                <div class="flex justify-between text-lg font-semibold">
+                    <p>Subtotal:</p>
+                    <p>$35.00</p>
+                </div>
+                <div class="flex justify-between text-lg font-semibold mt-2">
+                    <p>Shipping:</p>
+                    <p>$5.00</p>
+                </div>
+                <div class="flex justify-between text-xl font-bold mt-4">
+                    <p>Total:</p>
+                    <p>$40.00</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shipping Information -->
+        <div>
+            <h3 class="text-xl font-semibold mt-8">Shipping Information</h3>
+            <!-- Selection Containers -->
+            <div class="flex space-x-4 pt-4">
+                <!-- Local Pickup Container -->
+                <div id="pickupContainer" onclick="selectMethod('pickup')"
+                    class="p-4 border-2 border-gray-300 rounded-lg cursor-pointer w-1/2 text-center transition-all">
+                    <h2 class="text-lg font-semibold">Local Pickup</h2>
+                    <p class="text-gray-500">Pick up from the store.</p>
+                </div>
+
+                <!-- Delivery Container -->
+                <div id="deliveryContainer" onclick="selectMethod('delivery')"
+                    class="p-4 border-2 border-gray-300 rounded-lg cursor-pointer w-1/2 text-center transition-all">
+                    <h2 class="text-lg font-semibold">Delivery</h2>
+                    <p class="text-gray-500">Get it delivered to you.</p>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-evenly space-x-4">
+                <form class="mt-4 space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium">Full Name</label>
+                        <input type="text"
+                            class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
+                            placeholder="Enter your full name">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium">Address</label>
+                        <input type="text"
+                            class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
+                            placeholder="Enter your address">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium">City</label>
+                        <input type="text"
+                            class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
+                            placeholder="City">
+                    </div>
+
+                    <div class="flex space-x-4">
+                        <div class="w-1/2">
+                            <label class="block text-sm font-medium">State/Province</label>
+                            <input type="text"
+                                class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
+                                placeholder="State">
+                        </div>
+                        <div class="w-1/2">
+                            <label class="block text-sm font-medium">Postal Code</label>
+                            <input type="text"
+                                class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
+                                placeholder="Postal Code">
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <label class="block text-sm font-medium">Phone Number</label>
+                        <input type="text"
+                            class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
+                            placeholder="Enter your phone number">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium">Email</label>
+                        <input type="email"
+                            class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
+                            placeholder="Enter your email">
+                    </div>
+
+                </form>
+
+                <!-- Payment Section -->
+                <div>
+                    <h3 class="text-xl font-semibold my-8 text-center">Payment Method</h3>
+                    <div class="mt-4 h-full flex flex-col items-center space-y-5">
+                        <div id="payInPersonContainer" onclick="handleLocalPay()"
+                            class="p-4 border-2 border-gray-300 rounded-lg cursor-pointer w-2/3 text-center transition-all">
+                            <h2 class="text-lg font-semibold">Pay in Person</h2>
+                            <p class="text-gray-500">Pay when you come by!</p>
+                        </div>
+
+                        <div class="relative w-96 h-60 rounded-xl bg-indigo-500 overflow-hidden" id="card">
+                            <div class="absolute bottom-3 left-5 z-10">
+                                <label class="block text-xs font-medium text-white">Card Holders Name</label>
+                                <input type="text"
+                                    class="card-input w-full bg-transparent border-0 focus:ring-0 smooth placeholder-white text-white"
+                                    placeholder="John Doe">
+                            </div>
+                            <div class="absolute w-full top-1/2 -traslate-x-1/2 -translate-y-1/2 z-10">
+                                <input type="text"
+                                    class="card-input w-full text-3xl bg-transparent border-0 focus:ring-0 smooth placeholder-white text-white"
+                                    placeholder="1234 5678 9012 3456" oninput="handleCardNumberInput(event)">
+
+                            </div>
+                            <div class="absolute bottom-3 -right-24 z-10">
+                                <label class="block text-xs font-medium text-white">Expiry Date</label>
+                                <input type="text"
+                                    class="card-input w-full bg-transparent border-0 focus:ring-0 smooth placeholder-white text-white"
+                                    placeholder="MM/YY">
+                            </div>
+
+                            <div
+                                class="absolute -bottom-5 -left-5 bg-yellow-400 rounded-full w-32 h-32 mix-blend-overlay">
+                            </div>
+                            <div class="absolute top-5 right-5 bg-green-500 rounded-full w-24 h-24 mix-blend-overlay">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Place Order Button -->
+        <button
+            class="w-full mt-6 bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400">
+            Place Order
+        </button>
+    </div>
+</div>
+
+
+<script>
+    const handleCardNumberInput = (e) => {
+        e.target.value = e.target.value.replace(/\D/g, '').replace(/(\d{4})/g, '$1 ').trim().slice(0, 19);
+    }
+
+    let isLocalPay = false;
+
+    const selectMethod = (method) => {
+        isLocalPay = false;
+        const pickupContainer = document.getElementById('pickupContainer');
+        const deliveryContainer = document.getElementById('deliveryContainer');
+        const cardInputs = document.querySelectorAll('.card-input');
+        const localPay = document.getElementById('payInPersonContainer');
+        const card = document.getElementById('card');
+        if (method === 'pickup') {
+            pickupContainer.classList.add('border-indigo-500');
+            deliveryContainer.classList.remove('border-indigo-500');
+            localPay.classList.remove("hidden")
+        }
+        else {
+            deliveryContainer.classList.add('border-indigo-500');
+            pickupContainer.classList.remove('border-indigo-500');
+            localPay.classList.add("hidden")
+            cardInputs.forEach(input => {
+                input.disabled = false;
+            });
+            card.classList.remove('opacity-60');
+        }
+    }
+
+
+    const handleLocalPay = () => {
+        const localPay = document.getElementById('payInPersonContainer');
+        const card = document.getElementById('card');
+        const cardInputs = document.querySelectorAll('.card-input');
+        isLocalPay = !isLocalPay;
+        if (isLocalPay) {
+            localPay.classList.add('border-indigo-500');
+            card.classList.add('opacity-60');
+            cardInputs.forEach(input => {
+                input.disabled = true;
+            });
+        }
+        else {
+            localPay.classList.remove('border-indigo-500');
+            card.classList.remove('opacity-60');
+            cardInputs.forEach(input => {
+                input.disabled = false;
+            });
+        }
+    }
+
+</script>
