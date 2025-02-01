@@ -1,0 +1,4 @@
+Contact: mailto:security@luketowers.ca
+Preferred-Languages: en
+Canonical: https://github.com/luketowers/security-policy/blob/master/security.txt
+Policy: https://github.com/luketowers/security-policy/blob/master/SECURITY.md
