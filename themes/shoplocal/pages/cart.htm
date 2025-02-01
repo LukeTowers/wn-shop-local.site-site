@@ -1,0 +1,91 @@
+title = "Cart"
+url = "/cart"
+layout = "default"
+==
+<?php
+function onStart() {
+    $this['cart']=[
+        [
+            'id' => 0,
+            'name'=> 'Product 1',
+            'price' => 10.00,
+            'quantity' => 1,
+        ],
+        [
+            'id' => 1,
+            'name'=> 'Product 2',
+            'price' => 20.00,
+            'quantity' => 2,
+        ],
+        [
+            'id' => 2,
+            'name'=> 'Product 3',
+            'price' => 60.00,
+            'quantity' => 1,
+        ],
+    ];
+}
+?>
+==
+
+<div class="w-screen h-screen">
+    <!-- Shopping Cart Section -->
+    <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-semibold mb-6 text-center">Shopping Cart</h2>
+
+        {% for item in cart%}
+
+        <!-- Cart Items (Vertically arranged) -->
+        <div id="cart-items" class="space-y-6">
+            <!-- Cart Item 1 -->
+            <div class="cart-item p-4 flex justify-between items-center border-b border-gray-200">
+                <div class="flex space-x-4">
+
+                    <!-- Image -->
+                    <a href="retailer/{{ item.id }}" class="w-24 h-24 object-cover rounded-lg bg-indigo-500">
+                    </a>
+
+
+                    <div>
+                        <h4 class="font-semibold">
+                            {{ item.name }}
+                        </h4>
+                        <p class="text-sm text-gray-500">
+                            Price: ${{ item.price * item.quantity }}
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Quantity Control -->
+                <div class="flex items-center space-x-3">
+                    <button onclick="handleUpdateQuantity({{ item.id }}, -1)"
+                        class="bg-indigo-500 text-white p-1 w-7 h-7 flex items-center justify-center rounded-full hover:bg-indigo-600 smooth">
+                        <span>-</span>
+                    </button>
+                    <span class="font-semibold text-lg">{{ item.quantity }}</span>
+                    <button onclick="handleUpdateQuantity({{ item.id }}, 1)"
+                        class="bg-indigo-500 text-white p-1 w-7 h-7 flex items-center justify-center rounded-full hover:bg-indigo-600 smooth">
+                        <span>+</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <!-- Cart Summary -->
+        <div class="mt-6 flex justify-between items-center">
+
+            <div class="text-xl font-semibold">
+                Total: <span id="cart-total">$0.00</span>
+            </div>
+            <a href="/checkout" class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 smooth">
+                Checkout
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    const handleUpdateQuantity = (id, amount) => {
+
+    };
+</script>
