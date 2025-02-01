@@ -1,0 +1,16 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+contacts:
+    label: Contacts
+    view:
+        list: $/shoplocal/core/models/retailer/columns.contacts.yaml
+        toolbarButtons: create|delete
+        showCheckboxes: true
+    manage:
+        form: $/shoplocal/core/models/retailercontact/fields.yaml
+        list: $/shoplocal/core/models/retailer/columns.contacts.yaml
+        recordsPerPage: 10
+        showSearch: true
+        context: relation

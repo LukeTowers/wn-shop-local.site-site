@@ -1,0 +1,5 @@
+1.0.0:
+    - 'First version of Core'
+    - v1.0.0/create_retailer_categories_table.php
+    - v1.0.0/create_retailers_table.php
+    - v1.0.0/create_retailer_contacts_table.php

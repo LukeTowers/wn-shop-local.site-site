@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: 'shoplocal.core::lang.models.retailercontact.label'
+
+# Model Form Field configuration
+form: $/shoplocal/core/models/retailercontact/fields.yaml
+
+# Model Class name
+modelClass: ShopLocal\Core\Models\RetailerContact
+
+# Default redirect location
+defaultRedirect: shoplocal/core/retailercontacts
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: shoplocal/core/retailercontacts/update/:id
+    redirectClose: shoplocal/core/retailercontacts
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: shoplocal/core/retailercontacts
+    redirectClose: shoplocal/core/retailercontacts
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8a874b1cda8b71fd08b8d7783ba69fe7",
+    "content-hash": "9cfcbdd8f0861a90bddbc71ca518a74e",
     "packages": [
         {
             "name": "assetic/framework",
-            "version": "v3.1.2",
+            "version": "v3.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/assetic-php/assetic.git",
-                "reference": "da2b0131d9e472c6f623c7c8aaa5ed4ab8f9a1f1"
+                "reference": "064d27426d7d338c2286bc50ef5e2a6b8e59e126"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/assetic-php/assetic/zipball/da2b0131d9e472c6f623c7c8aaa5ed4ab8f9a1f1",
-                "reference": "da2b0131d9e472c6f623c7c8aaa5ed4ab8f9a1f1",
+                "url": "https://api.github.com/repos/assetic-php/assetic/zipball/064d27426d7d338c2286bc50ef5e2a6b8e59e126",
+                "reference": "064d27426d7d338c2286bc50ef5e2a6b8e59e126",
                 "shasum": ""
             },
             "require": {
@@ -91,9 +91,9 @@
             ],
             "support": {
                 "issues": "https://github.com/assetic-php/assetic/issues",
-                "source": "https://github.com/assetic-php/assetic/tree/v3.1.2"
+                "source": "https://github.com/assetic-php/assetic/tree/v3.1.3"
             },
-            "time": "2024-07-14T05:29:40+00:00"
+            "time": "2025-02-01T05:23:09+00:00"
         },
         {
             "name": "barryvdh/laravel-debugbar",
@@ -1505,6 +1505,139 @@
             "time": "2023-10-12T05:21:21+00:00"
         },
         {
+            "name": "giggsey/libphonenumber-for-php",
+            "version": "8.13.54",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/giggsey/libphonenumber-for-php.git",
+                "reference": "42d3a03d4f47fcb784666743f4323a7b87a2b2ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/42d3a03d4f47fcb784666743f4323a7b87a2b2ba",
+                "reference": "42d3a03d4f47fcb784666743f4323a7b87a2b2ba",
+                "shasum": ""
+            },
+            "require": {
+                "giggsey/locale": "^2.0",
+                "php": "^7.4|^8.0",
+                "symfony/polyfill-mbstring": "^1.17"
+            },
+            "replace": {
+                "giggsey/libphonenumber-for-php-lite": "self.version"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.64",
+                "pear/pear-core-minimal": "^1.10",
+                "pear/pear_exception": "^1.0",
+                "pear/versioncontrol_git": "^0.7",
+                "phing/phing": "^3.0",
+                "php-coveralls/php-coveralls": "^2.0",
+                "phpunit/phpunit": "^9.6",
+                "symfony/console": "^v5.2",
+                "symfony/var-exporter": "^5.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "8.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "libphonenumber\\": "src/"
+                },
+                "exclude-from-classmap": [
+                    "/src/data/",
+                    "/src/carrier/data/",
+                    "/src/geocoding/data/",
+                    "/src/timezone/data/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Joshua Gigg",
+                    "email": "giggsey@gmail.com",
+                    "homepage": "https://giggsey.com/"
+                }
+            ],
+            "description": "PHP Port of Google's libphonenumber",
+            "homepage": "https://github.com/giggsey/libphonenumber-for-php",
+            "keywords": [
+                "geocoding",
+                "geolocation",
+                "libphonenumber",
+                "mobile",
+                "phonenumber",
+                "validation"
+            ],
+            "support": {
+                "issues": "https://github.com/giggsey/libphonenumber-for-php/issues",
+                "source": "https://github.com/giggsey/libphonenumber-for-php"
+            },
+            "time": "2025-01-31T14:50:26+00:00"
+        },
+        {
+            "name": "giggsey/locale",
+            "version": "2.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/giggsey/Locale.git",
+                "reference": "a5c65ea3c2630f27ccb78977990eefbee6dd8f97"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/giggsey/Locale/zipball/a5c65ea3c2630f27ccb78977990eefbee6dd8f97",
+                "reference": "a5c65ea3c2630f27ccb78977990eefbee6dd8f97",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "ext-json": "*",
+                "friendsofphp/php-cs-fixer": "^3.64",
+                "pear/pear-core-minimal": "^1.9",
+                "pear/pear_exception": "^1.0",
+                "pear/versioncontrol_git": "^0.5",
+                "phing/phing": "^2.7",
+                "php-coveralls/php-coveralls": "^2.0",
+                "phpunit/phpunit": "^8.5|^9.5",
+                "symfony/console": "^5.0|^6.0",
+                "symfony/filesystem": "^5.0|^6.0",
+                "symfony/finder": "^5.0|^6.0",
+                "symfony/process": "^5.0|^6.0",
+                "symfony/var-exporter": "^5.2|^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Giggsey\\Locale\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joshua Gigg",
+                    "email": "giggsey@gmail.com",
+                    "homepage": "https://giggsey.com/"
+                }
+            ],
+            "description": "Locale functions required by libphonenumber-for-php",
+            "support": {
+                "issues": "https://github.com/giggsey/Locale/issues",
+                "source": "https://github.com/giggsey/Locale/tree/2.7.0"
+            },
+            "time": "2024-11-04T11:18:07+00:00"
+        },
+        {
             "name": "graham-campbell/result-type",
             "version": "v1.1.3",
             "source": {
@@ -2440,6 +2573,50 @@
                 }
             ],
             "time": "2024-09-21T08:32:55+00:00"
+        },
+        {
+            "name": "luketowers/wn-easyaudit-plugin",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LukeTowers/wn-easyaudit-plugin.git",
+                "reference": "b982207a7f9558493d2dbe90981308dc5a473f2a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LukeTowers/wn-easyaudit-plugin/zipball/b982207a7f9558493d2dbe90981308dc5a473f2a",
+                "reference": "b982207a7f9558493d2dbe90981308dc5a473f2a",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "winter-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Luke Towers",
+                    "email": "wintercms@luketowers.ca"
+                }
+            ],
+            "description": "View and manage audit logs for models within your Winter CMS projects",
+            "homepage": "https://github.com/LukeTowers/wn-easyaudit-plugin",
+            "keywords": [
+                "Audit",
+                "activity",
+                "easy audit",
+                "laravel",
+                "logging",
+                "logs",
+                "winter",
+                "wintercms"
+            ],
+            "support": {
+                "issues": "https://github.com/LukeTowers/wn-easyaudit-plugin/issues",
+                "source": "https://github.com/LukeTowers/wn-easyaudit-plugin/tree/main"
+            },
+            "time": "2024-10-29T09:03:46+00:00"
         },
         {
             "name": "maatwebsite/excel",
@@ -3575,6 +3752,78 @@
                 }
             ],
             "time": "2024-07-20T21:41:07+00:00"
+        },
+        {
+            "name": "propaganistas/laravel-phone",
+            "version": "5.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Propaganistas/Laravel-Phone.git",
+                "reference": "d8c0e5fbde9820e026595616a7a36074233a09c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Propaganistas/Laravel-Phone/zipball/d8c0e5fbde9820e026595616a7a36074233a09c6",
+                "reference": "d8c0e5fbde9820e026595616a7a36074233a09c6",
+                "shasum": ""
+            },
+            "require": {
+                "giggsey/libphonenumber-for-php": "^7.0|^8.0",
+                "illuminate/contracts": "^9.0|^10.0",
+                "illuminate/support": "^9.0|^10.0",
+                "illuminate/validation": "^9.0|^10.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.4",
+                "nunomaduro/larastan": "^2.4",
+                "orchestra/testbench": "*",
+                "phpunit/phpunit": "^9.5.10"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Propaganistas\\LaravelPhone\\PhoneServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Propaganistas\\LaravelPhone\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Propaganistas",
+                    "email": "Propaganistas@users.noreply.github.com"
+                }
+            ],
+            "description": "Adds phone number functionality to Laravel based on Google's libphonenumber API.",
+            "keywords": [
+                "laravel",
+                "libphonenumber",
+                "phone",
+                "validation"
+            ],
+            "support": {
+                "issues": "https://github.com/Propaganistas/Laravel-Phone/issues",
+                "source": "https://github.com/Propaganistas/Laravel-Phone/tree/5.1.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/Propaganistas",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-01-15T09:23:46+00:00"
         },
         {
             "name": "psr/clock",
@@ -7555,16 +7804,16 @@
         },
         {
             "name": "winter/storm",
-            "version": "v1.2.7",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wintercms/storm.git",
-                "reference": "99065c0e430941ea29515c7329cc9bc838305eca"
+                "reference": "b9b5aae924eaa4be17a10c7c8138732328be6b7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wintercms/storm/zipball/99065c0e430941ea29515c7329cc9bc838305eca",
-                "reference": "99065c0e430941ea29515c7329cc9bc838305eca",
+                "url": "https://api.github.com/repos/wintercms/storm/zipball/b9b5aae924eaa4be17a10c7c8138732328be6b7f",
+                "reference": "b9b5aae924eaa4be17a10c7c8138732328be6b7f",
                 "shasum": ""
             },
             "require": {
@@ -7616,6 +7865,7 @@
                 "ext-pdo_pgsql": "Required to use PostgreSQL databases",
                 "ext-pdo_sqlite": "Required to use SQLite databases"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -7662,7 +7912,7 @@
                 "winter"
             ],
             "support": {
-                "source": "https://github.com/wintercms/storm/tree/v1.2.7"
+                "source": "https://github.com/wintercms/storm/tree/develop"
             },
             "funding": [
                 {
@@ -7674,20 +7924,20 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2024-12-04T21:43:34+00:00"
+            "time": "2025-02-01T06:45:52+00:00"
         },
         {
             "name": "winter/wn-backend-module",
-            "version": "v1.2.7",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wintercms/wn-backend-module.git",
-                "reference": "22f3551b76f8b56a8024bb888d33c6c5174d5b75"
+                "reference": "17ab13a0d4cd6c64dd315394deecb06f29342494"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wintercms/wn-backend-module/zipball/22f3551b76f8b56a8024bb888d33c6c5174d5b75",
-                "reference": "22f3551b76f8b56a8024bb888d33c6c5174d5b75",
+                "url": "https://api.github.com/repos/wintercms/wn-backend-module/zipball/17ab13a0d4cd6c64dd315394deecb06f29342494",
+                "reference": "17ab13a0d4cd6c64dd315394deecb06f29342494",
                 "shasum": ""
             },
             "require": {
@@ -7698,6 +7948,7 @@
             "replace": {
                 "october/backend": "1.1.*"
             },
+            "default-branch": true,
             "type": "winter-module",
             "autoload": {
                 "psr-4": {
@@ -7733,7 +7984,7 @@
                 "winter cms"
             ],
             "support": {
-                "source": "https://github.com/wintercms/wn-backend-module/tree/v1.2.7"
+                "source": "https://github.com/wintercms/wn-backend-module/tree/develop"
             },
             "funding": [
                 {
@@ -7745,20 +7996,20 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2024-12-04T20:52:22+00:00"
+            "time": "2025-01-29T22:22:02+00:00"
         },
         {
             "name": "winter/wn-cms-module",
-            "version": "v1.2.7",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wintercms/wn-cms-module.git",
-                "reference": "35fc0701d87760b1339c3a909729b5bf7c1a62b5"
+                "reference": "728bc24221a0386ea6c8782c2576fe112939f77f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wintercms/wn-cms-module/zipball/35fc0701d87760b1339c3a909729b5bf7c1a62b5",
-                "reference": "35fc0701d87760b1339c3a909729b5bf7c1a62b5",
+                "url": "https://api.github.com/repos/wintercms/wn-cms-module/zipball/728bc24221a0386ea6c8782c2576fe112939f77f",
+                "reference": "728bc24221a0386ea6c8782c2576fe112939f77f",
                 "shasum": ""
             },
             "require": {
@@ -7769,6 +8020,7 @@
             "replace": {
                 "october/cms": "1.1.*"
             },
+            "default-branch": true,
             "type": "winter-module",
             "autoload": {
                 "psr-4": {
@@ -7804,7 +8056,7 @@
                 "winter cms"
             ],
             "support": {
-                "source": "https://github.com/wintercms/wn-cms-module/tree/v1.2.7"
+                "source": "https://github.com/wintercms/wn-cms-module/tree/develop"
             },
             "funding": [
                 {
@@ -7816,7 +8068,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2024-11-25T17:02:39+00:00"
+            "time": "2025-01-25T04:10:26+00:00"
         },
         {
             "name": "winter/wn-debugbar-plugin",
@@ -8160,16 +8412,16 @@
         },
         {
             "name": "winter/wn-system-module",
-            "version": "v1.2.7",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wintercms/wn-system-module.git",
-                "reference": "ebe5d5dfe49857c675d30e00f751f91df38cf81e"
+                "reference": "491805bff7b224eb9a3e5bbbcf7c680c46bcbc52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wintercms/wn-system-module/zipball/ebe5d5dfe49857c675d30e00f751f91df38cf81e",
-                "reference": "ebe5d5dfe49857c675d30e00f751f91df38cf81e",
+                "url": "https://api.github.com/repos/wintercms/wn-system-module/zipball/491805bff7b224eb9a3e5bbbcf7c680c46bcbc52",
+                "reference": "491805bff7b224eb9a3e5bbbcf7c680c46bcbc52",
                 "shasum": ""
             },
             "require": {
@@ -8181,6 +8433,7 @@
             "replace": {
                 "october/system": "1.1.*"
             },
+            "default-branch": true,
             "type": "winter-module",
             "autoload": {
                 "psr-4": {
@@ -8216,7 +8469,7 @@
                 "winter cms"
             ],
             "support": {
-                "source": "https://github.com/wintercms/wn-system-module/tree/v1.2.7"
+                "source": "https://github.com/wintercms/wn-system-module/tree/develop"
             },
             "funding": [
                 {
@@ -8228,7 +8481,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2024-12-04T21:26:45+00:00"
+            "time": "2025-02-01T06:46:31+00:00"
         },
         {
             "name": "winter/wn-tailwindui-plugin",
@@ -8295,6 +8548,78 @@
                 }
             ],
             "time": "2025-01-28T07:00:23+00:00"
+        },
+        {
+            "name": "winter/wn-user-plugin",
+            "version": "v2.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wintercms/wn-user-plugin.git",
+                "reference": "adc3036af65acb570fe95ae6a3873640d9eb55fb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wintercms/wn-user-plugin/zipball/adc3036af65acb570fe95ae6a3873640d9eb55fb",
+                "reference": "adc3036af65acb570fe95ae6a3873640d9eb55fb",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=7.2"
+            },
+            "replace": {
+                "rainlab/user-plugin": "~1.5"
+            },
+            "type": "winter-plugin",
+            "extra": {
+                "installer-name": "user"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexey Bobkov",
+                    "email": "aleksey.bobkov@gmail.com",
+                    "role": "Original Author"
+                },
+                {
+                    "name": "Samuel Georges",
+                    "email": "daftspunky@gmail.com",
+                    "role": "Original Author"
+                },
+                {
+                    "name": "Winter CMS Maintainers",
+                    "homepage": "https://wintercms.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "User plugin for Winter CMS",
+            "homepage": "https://github.com/wintercms/wn-user-plugin",
+            "keywords": [
+                "Authentication",
+                "plugin",
+                "user",
+                "winter",
+                "winter cms"
+            ],
+            "support": {
+                "discord": "https://discord.gg/D5MFSPH6Ux",
+                "issues": "https://github.com/wintercms/wn-user-plugin/issues",
+                "source": "https://github.com/wintercms/wn-user-plugin"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/wintercms",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/wintercms",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2024-07-18T18:35:26+00:00"
         }
     ],
     "packages-dev": [
@@ -10369,14 +10694,26 @@
             "time": "2024-03-03T12:36:25+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "winter/storm",
+            "version": "dev-develop",
+            "alias": "1.2",
+            "alias_normalized": "1.2.0.0"
+        }
+    ],
     "minimum-stability": "dev",
     "stability-flags": {
+        "luketowers/wn-easyaudit-plugin": 20,
+        "winter/storm": 20,
+        "winter/wn-backend-module": 20,
+        "winter/wn-cms-module": 20,
         "winter/wn-debugbar-plugin": 20,
         "winter/wn-excel-plugin": 20,
         "winter/wn-ignition-plugin": 20,
         "winter/wn-seo-plugin": 20,
         "winter/wn-sitemap-plugin": 20,
+        "winter/wn-system-module": 20,
         "winter/wn-tailwindui-plugin": 20
     },
     "prefer-stable": true,

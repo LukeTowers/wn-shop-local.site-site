@@ -1,0 +1,153 @@
+/* General Styles */
+.page-content {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #5C6BC0, #af86e9); /* Gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* Container for the sign-in form */
+.signin-container {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Welcome message */
+.welcome-message {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.subtext {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+/* Input groups */
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    padding-left: 2.5rem; /* Space for icons */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
+
+.input-icon {
+    position: absolute;
+    left: 10px;
+    top: 66%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 1rem;
+}
+
+/* Submit button */
+.submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #5C6BC0;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.submit-btn:active {
+    transform: translateY(0); /* Reset on click */
+}
+
+/* Sign-up link */
+.signup-link {
+    margin-top: 1.5rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.signup-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.signup-link a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .signin-container {
+        padding: 1.5rem;
+    }
+
+    .welcome-message {
+        font-size: 1.8rem;
+    }
+
+    .subtext {
+        font-size: 0.85rem;
+    }
+
+    .input-group input {
+        padding-left: 2.2rem;
+    }
+
+    .input-icon {
+        font-size: 0.9rem;
+    }
+}

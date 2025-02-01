@@ -1,0 +1,39 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    type:
+        label: Type
+        type: balloon-selector
+        span: left
+        options:
+            address: Address
+            email: Email
+            phone: Phone
+            website: Website
+            facebook: Facebook
+            instagram: Instagram
+            twitter: Twitter
+            youtube: Youtube
+            other: Other
+            tiktok: Tiktok
+    value:
+        label: Value
+        type: text
+        span: right
+
+tabs:
+    fields:
+        metadata[notes]:
+            label: Notes
+            tab: Details
+            type: textarea
+            span: full
+            size: large
+        is_public:
+            label: Public
+            type: switch
+            tab: Details
+            default: true
+            span: left

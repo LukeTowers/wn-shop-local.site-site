@@ -22,7 +22,8 @@ ln -s $SHARED/storage $RELEASE/storage
 
 # Install dependencies from composer.lock - add --no-dev for staging & production environments
 echo "Installing dependencies from composer.lock"
-composer install --no-dev
+composer install
+# @TODO, restore --no-dev
 
 # Trigger Laravel package discovery
 echo "Discovering packages"

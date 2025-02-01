@@ -1,88 +1,83 @@
 title = "Home"
-url = "/"
+url = "/home"
 layout = "default"
 ==
 <?php
 function onStart()
 {
-
-
-$this['shops'] = [
-    [
-        'name' => 'ShopLocal',
-        'url' => 'https://shoplocal.com/',
-        'username' => 'shoplocal_user',
-    ],
-    [
-        'name' => 'LocalPick',
-        'url' => 'https://localpick.com/',
-        'username' => 'localpick_user',
-    ],
-    [
-        'name' => 'QuickBrowse',
-        'url' => 'https://quickbrowse.com/',
-        'username' => 'quickbrowse_user',
-    ],
-    [
-        'name' => 'NearYouStore',
-        'url' => 'https://nearyoustore.com/',
-        'username' => 'nearyoustore_user',
-    ],
-    [
-        'name' => 'ShopSphere',
-        'url' => 'https://shopsphere.com/',
-        'username' => 'shopsphere_user',
-    ],
-    [
-        'name' => 'RetailReach',
-        'url' => 'https://retailreach.com/',
-        'username' => 'retailreach_user',
-    ],
-    [
-        'name' => 'ClickNShop',
-        'url' => 'https://clicknshop.com/',
-        'username' => 'clicknshop_user',
-    ],
-    [
-        'name' => 'BrowseNearby',
-        'url' => 'https://browsenearby.com/',
-        'username' => 'browsenearby_user',
-    ],
-    [
-        'name' => 'UrbanCart',
-        'url' => 'https://urbancart.com/',
-        'username' => 'urbancart_user',
-    ],
-    [
-        'name' => 'LocalGems',
-        'url' => 'https://localgems.com/',
-        'username' => 'localgems_user',
-    ],
-];
+    $this['shops'] = [
+        [
+            'name' => 'ShopLocal',
+            'url' => 'https://shoplocal.com/',
+            'username' => 'shoplocal_user',
+        ],
+        [
+            'name' => 'LocalPick',
+            'url' => 'https://localpick.com/',
+            'username' => 'localpick_user',
+        ],
+        [
+            'name' => 'QuickBrowse',
+            'url' => 'https://quickbrowse.com/',
+            'username' => 'quickbrowse_user',
+        ],
+        [
+            'name' => 'NearYouStore',
+            'url' => 'https://nearyoustore.com/',
+            'username' => 'nearyoustore_user',
+        ],
+        [
+            'name' => 'ShopSphere',
+            'url' => 'https://shopsphere.com/',
+            'username' => 'shopsphere_user',
+        ],
+        [
+            'name' => 'RetailReach',
+            'url' => 'https://retailreach.com/',
+            'username' => 'retailreach_user',
+        ],
+        [
+            'name' => 'ClickNShop',
+            'url' => 'https://clicknshop.com/',
+            'username' => 'clicknshop_user',
+        ],
+        [
+            'name' => 'BrowseNearby',
+            'url' => 'https://browsenearby.com/',
+            'username' => 'browsenearby_user',
+        ],
+        [
+            'name' => 'UrbanCart',
+            'url' => 'https://urbancart.com/',
+            'username' => 'urbancart_user',
+        ],
+        [
+            'name' => 'LocalGems',
+            'url' => 'https://localgems.com/',
+            'username' => 'localgems_user',
+        ],
+    ];
 }
 ?>
 ==
 <div class="h-screen w-full px-2 grid md:grid-cols-4 grid-cols-3 gap-2">
     {% for shop in shops %}
-    <a class="group flex flex-col w-full h-full p-2 relative" href={{ shop.url }}>
+        <a class="group flex flex-col w-full h-full p-2 relative" href="{{ shop.url }}">
+            {# put image as the background #}
+            <div class="relative w-full h-full bg-indigo-400 rounded-lg overflow-hidden">
+                <div
+                    class="group absolute bottom-0 opacity-0 group-hover:opacity-100 h-12 w-full bg-black bg-opacity-50 smooth flex items-center justify-center">
+                    <h1 class="text-white">
+                        {{ shop.name }}
+                    </h1>
+                </div>
+            </div>
 
-
-        {# put image as the background #}
-        <div class="relative w-full h-full bg-indigo-400 rounded-lg overflow-hidden">
-            <div
-                class="group absolute bottom-0 opacity-0 group-hover:opacity-100 h-12 w-full bg-black bg-opacity-50 smooth flex items-center justify-center">
-                <h1 class="text-white">
-                    {{ shop.name }}
+            <div class=" flex items-center justify-start space-x-2 p-1">
+                <h1 class="font-bold truncate">
+                    {{ shop.username }}
                 </h1>
             </div>
-        </div>
-
-
-        <div class=" flex items-center justify-start space-x-2 p-1">
-            <h1 class="font-bold truncate">
-                {{ shop.username }}
-            </h1>
-        </div>
-    </a>
+        </a>
     {% endfor %}
 </div>

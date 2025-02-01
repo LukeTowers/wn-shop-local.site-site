@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: 'shoplocal.core::lang.models.retailercategory.label'
+
+# Model Form Field configuration
+form: $/shoplocal/core/models/retailercategory/fields.yaml
+
+# Model Class name
+modelClass: ShopLocal\Core\Models\RetailerCategory
+
+# Default redirect location
+defaultRedirect: shoplocal/core/retailercategories
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: shoplocal/core/retailercategories/update/:id
+    redirectClose: shoplocal/core/retailercategories
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: shoplocal/core/retailercategories
+    redirectClose: shoplocal/core/retailercategories
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title
