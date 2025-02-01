@@ -36,3 +36,6 @@ public
 # Composer includes
 modules
 plugins/winter
+
+# ignore the autoreload file
+build.sh
