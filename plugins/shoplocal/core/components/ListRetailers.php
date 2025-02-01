@@ -59,6 +59,8 @@ class ListRetailers extends ComponentBase
 
     protected function getFilteredQuery(): ?\Illuminate\Database\Eloquent\Builder
     {
+        $host = parse_url(config('app.url'), PHP_URL_HOST);
+
         $query = Retailer::query()
             ->with([
                 'contacts' => function ($q) {
@@ -79,18 +81,16 @@ class ListRetailers extends ComponentBase
         });
         if (isset($recordCodes[$filter])) {
             // Apply the record filter to the base query and eager load the required relationships
-            $query->where('id', $recordCodes[$filter])
-                ->with('region', 'area', 'zone');
+            $query->where('id', $recordCodes[$filter]);
 
             // Populate the page variables
             $record = $query->first();
-            $this->page['title'] = $record->title;
-            $this->page['description'] = $record->localized_type;
+            $this->page['title'] = $record->name;
+            $this->page['description'] = $record->category->name;
             $this->page['breadcrumbs'] = array_filter([
-                $record->region ? ['name' => $record->region->name . ' Region', 'url' => $record->region->site_url] : null,
-                $record->area ? ['name' => $record->area->name, 'url' => $record->area->site_url] : null,
-                $record->zone ? ['name' => $record->zone->name, 'url' => $record->zone->site_url] : null,
-                ['name' => $record->abbreviation, 'url' => $record->site_url],
+                $record->province ? ['name' => $record->province , 'url' => 'https://' . Str::slug($record->province) . '.' . parse_url(config('app.url'), PHP_URL_HOST)] : null,
+                $record->city ? ['name' => $record->city, 'url' => 'https://' . Str::slug($record->city) . '.' . parse_url(config('app.url'), PHP_URL_HOST)] : null,
+                ['name' => $record->name, 'url' => $record->site_url],
             ]);
             return $query;
         }
