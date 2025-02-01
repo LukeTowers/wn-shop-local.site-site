@@ -45,11 +45,12 @@ class ListRetailers extends ComponentBase
     {
         $appHost = parse_url(config('app.url'), PHP_URL_HOST);
         $currentHost = request()->getHost();
-
+        //dd($appHost, $currentHost);
         // Check for a subdomain
         if (Str::endsWith($currentHost, '.' . $appHost)) {
             $filter = Str::before($currentHost, '.' . $appHost);
             if (strlen($filter) > 0) {
+                // dd($filter);
                 return $filter;
             }
         }

@@ -30,7 +30,7 @@ function onStart() {
 
 
 <div class="w-full h-full">
-    <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+    <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg ">
         <h2 class="text-4xl font-semibold mb-6 text-center">Checkout</h2>
 
         <div>
@@ -40,7 +40,7 @@ function onStart() {
                 <div class="flex items-end border-b pb-4 space-x-4">
                     <div class="flex space-x-4">
                         <!-- Image -->
-                        <a href="retailer/{{ item.id }}" class="w-24 h-24 object-cover rounded-lg bg-indigo-500">
+                        <a class="w-24 h-24 object-cover rounded-lg bg-indigo-500">
                         </a>
 
                     </div>
@@ -67,21 +67,21 @@ function onStart() {
                         <div>
                             <label class="block text-sm font-medium">Full Name</label>
                             <input type="text"
-                                class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
+                                class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:shadow-lg shadow-md smooth focus:shadow-indigo-400"
                                 placeholder="Enter your full name">
                         </div>
 
                         <div>
                             <label class="block text-sm font-medium">Phone Number</label>
                             <input type="text"
-                                class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
+                                class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:shadow-lg shadow-md smooth focus:shadow-indigo-400"
                                 placeholder="Enter your phone number">
                         </div>
 
                         <div>
                             <label class="block text-sm font-medium">Email</label>
                             <input type="email"
-                                class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
+                                class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:shadow-lg shadow-md smooth focus:shadow-indigo-400"
                                 placeholder="Enter your email">
                         </div>
                     </div>
@@ -90,13 +90,13 @@ function onStart() {
                             <div class="w-1/2">
                                 <label class="block text-sm font-medium">State/Province</label>
                                 <input type="text"
-                                    class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
+                                    class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:shadow-lg shadow-md smooth focus:shadow-indigo-400"
                                     placeholder="State">
                             </div>
                             <div class="w-1/2">
                                 <label class="block text-sm font-medium">Postal Code</label>
                                 <input type="text"
-                                    class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
+                                    class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:shadow-lg shadow-md smooth focus:shadow-indigo-400"
                                     placeholder="Postal Code">
                             </div>
                         </div>
@@ -104,14 +104,14 @@ function onStart() {
                         <div>
                             <label class="block text-sm font-medium">Address</label>
                             <input type="text"
-                                class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
+                                class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:shadow-lg shadow-md smooth focus:shadow-indigo-400"
                                 placeholder="Enter your address">
                         </div>
 
                         <div>
                             <label class="block text-sm font-medium">City</label>
                             <input type="text"
-                                class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400"
+                                class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:shadow-lg shadow-md smooth focus:shadow-indigo-400"
                                 placeholder="City">
                         </div>
 
@@ -156,7 +156,8 @@ function onStart() {
 
 
                         <div class="w-full flex items-center justify-center">
-                            <div class="relative w-96 h-60 rounded-xl bg-indigo-500 overflow-hidden smooth" id="card">
+                            <div class="relative w-96 h-60 rounded-xl bg-indigo-500 overflow-hidden smooth  hover:scale-110 hover:shadow-lg hover:shadow-indigo-400"
+                                id="card">
                                 <div class="absolute bottom-3 left-5 z-10">
                                     <label class="block text-xs font-medium text-white">Card Holders Name</label>
                                     <input type="text"
@@ -173,14 +174,14 @@ function onStart() {
                                     <label class="block text-xs font-medium text-white">Expiry Date</label>
                                     <input type="text"
                                         class="card-input w-full bg-transparent border-0 focus:ring-0 smooth placeholder-white text-white"
-                                        placeholder="MM/YY">
+                                        placeholder="MM/YY" oninput="handeCardExpireInput(event)">
                                 </div>
 
                                 <div
                                     class="absolute -bottom-5 -left-5 bg-yellow-400 rounded-full w-32 h-32 mix-blend-overlay">
                                 </div>
                                 <div
-                                    class="absolute top-5 right-5 bg-green-500 rounded-full w-24 h-24 mix-blend-overlay">
+                                    class="absolute top-5 right-5 bg-green-500 rounded-full w-24 h-24 mix-blend-overlay smooth hover:scale-125">
                                 </div>
                             </div>
                         </div>
@@ -212,7 +213,7 @@ function onStart() {
         </div>
         <!-- Place Order Button -->
         <button
-            class="w-full mt-6 bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400">
+            class="w-full mt-6 bg-green-500 text-white py-3 rounded-lg font-semibold smooth hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 hover:scale-110 hover:shadow-lg hover:shadow-green-600">
             Place Order
         </button>
     </div>
@@ -224,7 +225,12 @@ function onStart() {
         e.target.value = e.target.value.replace(/\D/g, '').replace(/(\d{4})/g, '$1 ').trim().slice(0, 19);
     }
 
-    let isLocalPay = false;
+    const handeCardExpireInput = (e) => {
+        e.target.value = e.target.value.replace(/\D/g, '').replace(/(\d{2})/g, '$1/').trim().slice(0, 5);
+    }
+
+
+    let isLocalPay = true;
 
     const selectMethod = (method) => {
         isLocalPay = false;
@@ -235,15 +241,15 @@ function onStart() {
         const card = document.getElementById('card');
         const total = document.getElementById('total');
         if (method === 'pickup') {
-            pickupContainer.classList.add('border-indigo-500');
-            deliveryContainer.classList.remove('border-indigo-500');
+            pickupContainer.classList.add('border-indigo-500', "shadow-lg", "shadow-indigo-400");
+            deliveryContainer.classList.remove('border-indigo-500', "shadow-lg", "shadow-indigo-400");
             localPay.classList.remove("hidden")
             deliveryFee.classList.add('hidden');
             total.innerText = "36.00"
         }
         else {
-            deliveryContainer.classList.add('border-indigo-500');
-            pickupContainer.classList.remove('border-indigo-500');
+            deliveryContainer.classList.add('border-indigo-500', "shadow-lg", "shadow-indigo-400");
+            pickupContainer.classList.remove('border-indigo-500', "shadow-lg", "shadow-indigo-400");
             localPay.classList.add("hidden")
             card.classList.remove('hidden');
             deliveryFee.classList.remove('hidden');
@@ -258,17 +264,19 @@ function onStart() {
         const card = document.getElementById('card');
         isLocalPay = !isLocalPay;
         if (isLocalPay) {
-            localPay.classList.add('border-indigo-500');
-            localPayCredit.classList.remove('border-indigo-500');
+            localPay.classList.add('border-indigo-500', "shadow-lg", "shadow-indigo-400");
+            localPayCredit.classList.remove('border-indigo-500', "shadow-lg", "shadow-indigo-400");
             card.classList.add('hidden');
         }
         else {
-            localPay.classList.remove('border-indigo-500');
-            localPayCredit.classList.add('border-indigo-500');
+            localPay.classList.remove('border-indigo-500', "shadow-lg", "shadow-indigo-400");
+            localPayCredit.classList.add('border-indigo-500', "shadow-lg", "shadow-indigo-400");
             card.classList.remove('hidden');
         }
     }
 
     selectMethod('delivery')
+    isLocalPay = true;
+    handleLocalPay()
 
 </script>
