@@ -1,6 +1,10 @@
 title="Register as a Retailer"
 url="/register-retailer"
 layout="default"
+
+[session]
+redirect = "account/signin"
+security = "user"
 ==
 <?php
 function onStart() {
