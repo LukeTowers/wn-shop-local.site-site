@@ -148,7 +148,7 @@ class Retailer extends Model
             return $this->logo->getPath();
         }
 
-        return 'https://ui-avatars.com/api/?name=' . urlencode($this->name) . '&size=200';
+        return 'https://ui-avatars.com/api/?name=' . urlencode($this->name) . '&size=200&background=random';
     }
 
     /**
