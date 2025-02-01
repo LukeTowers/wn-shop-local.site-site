@@ -33,7 +33,7 @@ echo "Installing dependencies from package-lock.json"
 npm ci
 
 echo "Compiling theme assets"
-php artisan vite:compile -p theme-shoplocal --production
+# php artisan vite:compile -p theme-shoplocal --production
 
 # Enable maintenance mode
 echo "Enabling maintenance mode"
