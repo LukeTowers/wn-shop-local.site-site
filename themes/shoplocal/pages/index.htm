@@ -75,37 +75,4 @@ function getProvinceUrl($code)
     </div>
 
 
-    <script>
-
-        document.addEventListener('DOMContentLoaded', () => {
-            // Select all the items in the container
-            const items = document.querySelectorAll('.item');
-
-            // Callback for when an item enters or leaves the viewport
-            const observerCallback = (entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting)
-                        // Add class when the item is in view
-                        entry.target.classList.remove('translate-y-20', 'opacity-0', 'scale-50');
-
-                    else
-                        // Remove class when the item is out of view
-                        entry.target.classList.add('translate-y-20', 'opacity-0', 'scale-50');
-
-                });
-            };
-
-            // Create an intersection observer instance
-            const observer = new IntersectionObserver(observerCallback, {
-                root: null, // Observe within the viewport
-                threshold: 0.1 // 10% of the item should be visible
-            });
-
-            // Observe each item
-            items.forEach(item => {
-                observer.observe(item);
-            });
-        });
-    </script>
-
 {% endif %}
