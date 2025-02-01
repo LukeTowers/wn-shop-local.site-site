@@ -3,6 +3,7 @@
 use BackendMenu;
 use Backend\Classes\Controller;
 use Illuminate\Support\Facades\Cache;
+use ShopLocal\Core\Models\Product;
 use ShopLocal\Core\Models\Retailer;
 use Winter\Storm\Support\Facades\Flash;
 
@@ -43,5 +44,24 @@ class Retailers extends Controller
         Cache::clear();
         Flash::success("Successfully created $count retailers");
         return redirect()->refresh();
+    }
+
+    public function update_onGenerateDummyProductData($id)
+    {
+        $retailer = Retailer::find($id);
+        $count = 10;
+
+        if (!$retailer) {
+            throw new \Winter\Storm\Exception\ApplicationException("Retailer not found.");
+        }
+
+        // Generate 10 products using the factory
+        Product::factory()->count($count)->create([
+            'retailer_id' => $retailer->id,
+        ]);
+
+        Flash::success("Successfully created $count products");
+        $this->update($id);
+        return $this->relationRefresh('products');
     }
 }

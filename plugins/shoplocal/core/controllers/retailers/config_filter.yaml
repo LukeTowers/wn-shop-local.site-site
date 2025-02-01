@@ -1,0 +1,7 @@
+scopes:
+    provinces:
+        label: Province
+        type: group
+        modelClass: ShopLocal\Core\Models\Retailer
+        options: getProvinceOptions
+        conditions: province in (:filtered)

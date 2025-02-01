@@ -28,5 +28,9 @@ return [
             'label' => 'Category',
             'label_plural' => 'Categories',
         ],
+        'product' => [
+            'label' => 'Product',
+            'label_plural' => 'Products',
+        ],
     ],
 ];

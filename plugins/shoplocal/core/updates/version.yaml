@@ -3,3 +3,6 @@
     - v1.0.0/create_retailer_categories_table.php
     - v1.0.0/create_retailers_table.php
     - v1.0.0/create_retailer_contacts_table.php
+1.0.1:
+    - 'Create Products Table'
+    - v1.0.1/create_products_table.php

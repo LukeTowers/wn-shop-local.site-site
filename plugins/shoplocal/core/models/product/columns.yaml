@@ -1,0 +1,38 @@
+columns:
+    id:
+        label: ID
+        type: number
+        invisible: true
+
+    name:
+        label: Name
+        type: text
+        searchable: true
+
+    retailer:
+        label: Retailer
+        relation: retailer
+        select: name
+        invisible: true
+        searchable: true
+
+    price:
+        label: Price
+        type: number
+        sortable: true
+        format: "$%s"
+
+    currency:
+        label: Currency
+        type: text
+        invisible: true
+
+    is_available:
+        label: Available
+        type: switch
+        sortable: true
+
+    created_at:
+        label: Created At
+        type: datetime
+        sortable: true

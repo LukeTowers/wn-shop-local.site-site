@@ -88,6 +88,13 @@ class Plugin extends PluginBase
                     'retailercategories' => [
                         'label'       => 'shoplocal.core::lang.models.retailercategory.label_plural',
                         'url'         => Backend::url('shoplocal/core/retailercategories'),
+                        'icon'        => 'icon-tags',
+                        'permissions' => ['shoplocal.core.*'],
+                        'order'       => 500,
+                    ],
+                    'products' => [
+                        'label'       => 'shoplocal.core::lang.models.product.label_plural',
+                        'url'         => Backend::url('shoplocal/core/products'),
                         'icon'        => 'icon-boxes',
                         'permissions' => ['shoplocal.core.*'],
                         'order'       => 500,

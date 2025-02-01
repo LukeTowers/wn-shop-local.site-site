@@ -14,3 +14,15 @@ contacts:
         recordsPerPage: 10
         showSearch: true
         context: relation
+
+products:
+    label: Products
+    view:
+        list: $/shoplocal/core/models/product/columns.yaml
+        toolbarButtons: create|delete|generateData
+        showSearch: true
+        recordsPerPage: 10
+    manage:
+        form: $/shoplocal/core/models/product/fields.yaml
+        showSearch: true
+    emptyMessage: "No products found."

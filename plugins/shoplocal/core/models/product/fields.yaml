@@ -1,0 +1,53 @@
+fields:
+    name:
+        label: Product Name
+        type: text
+        span: full
+
+    retailer:
+        label: Retailer
+        type: relation
+        span: full
+        nameFrom: name
+        context:
+            - create
+
+    price:
+        label: Price
+        type: number
+        min: 1.00
+        step: 0.01
+        span: right
+        placeholder: "Enter price"
+
+    currency:
+        label: Currency
+        type: dropdown
+        options:
+            CAD: Canadian Dollar (CAD)
+            USD: US Dollar (USD)
+        default: CAD
+        span: left
+
+    # is_available:
+    #     label: Available for Sale
+    #     type: switch
+    #     span: right
+
+    description:
+        label: Description
+        type: textarea
+        size: large
+        span: full
+
+    images:
+        label: Images
+        span: full
+        type: fileupload
+        mode: image
+
+    # metadata:
+    #     label: Additional Data (JSON)
+    #     type: code
+    #     language: json
+    #     span: full
