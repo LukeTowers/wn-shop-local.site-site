@@ -25,7 +25,8 @@
         "winter/wn-sitemap-plugin": "dev-main",
         "winter/wn-excel-plugin": "dev-main",
         "luketowers/wn-easyaudit-plugin": "dev-main",
-        "winter/wn-user-plugin": "^2.2"
+        "winter/wn-user-plugin": "^2.2",
+        "winter/wn-sentry-plugin": "^2.2"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5.8",
