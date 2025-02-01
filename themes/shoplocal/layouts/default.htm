@@ -3,7 +3,7 @@ default = true
 
 [account]
 paramCode = "code"
-redirect = "account/dashboard"
+redirect = "retailer-form"
 forceSecure = 0
 requirePassword = 0
 
@@ -29,11 +29,12 @@ requirePassword = 0
                 Register
             </a>
             {% else %}
-            <a data-request="onLogout"
-                class="block py-2 px-4 rounded-lg border border-indigo-500 bg-indigo-500 text-white hover:bg-indigo-600 smooth">
+                <a
+                    data-request="onLogout"
+                    class="block py-2 px-4 rounded-lg border border-indigo-500 bg-indigo-500 text-white hover:bg-indigo-600 smooth"
                 >
-                Sign Out
-            </a>
+                    Sign Out
+                </a>
             {% endif %}
             <a href="{{ 'cart' | page }}" class="fill-indigo-500 block ml-4 py-2 px-4 smooth hover:scale-105">
                 <svg xmlns="http://www.w3.org/2000/svg" height="31px" viewBox="0 -960 960 960" width="31px">
