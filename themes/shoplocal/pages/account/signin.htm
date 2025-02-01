@@ -1,0 +1,26 @@
+title = "Login"
+url = "/account/signin"
+layout = "default"
+is_hidden = 0
+meta_nofollow = 0
+
+[account]
+paramCode = "code"
+forceSecure = 0
+requirePassword = 0
+==
+<?php
+function onStart()
+{
+    $this->addCss('/themes/shoplocal/assets/src/css/page-login.css');
+    $this->addCss('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+}
+?>
+==
+{% if not user %}
+
+    <div class="page-content">
+        {% partial account ~ '::signin' %}
+    </div>
+
+{% endif %}
