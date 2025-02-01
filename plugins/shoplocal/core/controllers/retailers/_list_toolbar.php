@@ -6,6 +6,14 @@
     </a>
 
     <button
+        class="btn btn-primary wn-icon-shuffle"
+        data-request="onGenerateDummyData"
+        data-request-confirm="Would you like to generate & insert dummy data?"
+        data-stripe-load-indicator>
+        Generate Data
+    </button>
+
+    <button
         class="btn btn-danger wn-icon-trash-o"
         disabled="disabled"
         onclick="$(this).data('request-data', { checked: $('.control-list').listWidget('getChecked') })"

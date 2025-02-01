@@ -2,6 +2,9 @@
 
 use BackendMenu;
 use Backend\Classes\Controller;
+use Illuminate\Support\Facades\Cache;
+use ShopLocal\Core\Models\RetailerCategory;
+use Winter\Storm\Support\Facades\Flash;
 
 /**
  * Retailer Categories Backend Controller
@@ -28,5 +31,14 @@ class RetailerCategories extends Controller
         parent::__construct();
 
         BackendMenu::setContext('ShopLocal.Core', 'core', 'retailercategories');
+    }
+
+    public function onGenerateDummyData()
+    {
+        $count = 10;
+        RetailerCategory::factory()->count($count)->create();
+        Flash::success("Successfully created $count categories");
+        Cache::clear();
+        return redirect()->refresh();
     }
 }

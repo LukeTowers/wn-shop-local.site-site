@@ -2,6 +2,9 @@
 
 use BackendMenu;
 use Backend\Classes\Controller;
+use Illuminate\Support\Facades\Cache;
+use ShopLocal\Core\Models\Retailer;
+use Winter\Storm\Support\Facades\Flash;
 
 /**
  * Retailers Backend Controller
@@ -31,5 +34,14 @@ class Retailers extends Controller
         BackendMenu::setContext('ShopLocal.Core', 'core', 'retailers');
 
         $this->bodyClass = 'compact-container';
+    }
+
+    public function onGenerateDummyData()
+    {
+        $count = 50;
+        Retailer::factory()->count($count)->create();
+        Cache::clear();
+        Flash::success("Successfully created $count retailers");
+        return redirect()->refresh();
     }
 }
