@@ -33,7 +33,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Winter CMS'),
+    'name' => env('APP_NAME', 'Shop-Local.site'),
 
     /*
     |--------------------------------------------------------------------------

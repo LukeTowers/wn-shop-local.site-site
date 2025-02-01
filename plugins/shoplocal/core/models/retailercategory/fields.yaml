@@ -1,0 +1,16 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: 'shoplocal.core::lang.models.general.name'
+        type: text
+        span: auto
+    slug:
+        label: 'shoplocal.core::lang.models.general.code'
+        type: text
+        span: auto
+        preset:
+            field: name
+            type: slug

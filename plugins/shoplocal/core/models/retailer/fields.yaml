@@ -1,0 +1,78 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: 'shoplocal.core::lang.models.general.name'
+        type: text
+        span: auto
+    code:
+        label: 'shoplocal.core::lang.models.general.code'
+        type: text
+        span: auto
+        preset:
+            field: name
+            type: slug
+    category:
+        type: relation
+        label: Category
+        span: auto
+
+tabs:
+    fields:
+        city:
+            label: City
+            type: text
+            default: Regina
+            span: auto
+            tab: Contact
+        province:
+            label: Province
+            type: dropdown
+            span: auto
+            default: sk
+            options:
+                "ab": "Alberta"
+                "bc": "British Columbia"
+                "mb": "Manitoba"
+                "nb": "New Brunswick"
+                "nl": "Newfoundland and Labrador"
+                "nt": "Northwest Territories"
+                "ns": "Nova Scotia"
+                "nu": "Nunavut"
+                "on": "Ontario"
+                "pe": "Prince Edward Island"
+                "qc": "Quebec"
+                "sk": "Saskatchewan"
+                "yt": "Yukon"
+            tab: Contact
+        lat:
+            label: Latitude
+            type: number
+            tab: Contact
+            span: left
+            placeholder: 90
+            min: -90
+            max: 90
+        lng:
+            label: Longitude
+            type: number
+            tab: Contact
+            span: right
+            placeholder: 180
+            min: -180
+        contacts:
+            label: Contacts
+            type: relationmanager
+            span: full
+            tab: Contact
+
+
+secondaryTabs:
+    fields:
+        logo:
+            type: fileupload
+            mode: image
+            label: Logo
+            span: full

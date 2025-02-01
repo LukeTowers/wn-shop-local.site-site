@@ -1,0 +1,24 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    type:
+        label: Type
+        searchable: true
+        sortable: true
+    value:
+        label: Value
+        searchable: true
+        sortable: true
+    created_at:
+        label: 'shoplocal.core::lang.models.general.created_at'
+        type: datetime
+        searchable: true
+        sortable: true
+        invisible: true
+    updated_at:
+        label: 'shoplocal.core::lang.models.general.updated_at'
+        type: datetime
+        searchable: true
+        sortable: true

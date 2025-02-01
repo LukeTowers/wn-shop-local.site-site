@@ -11,8 +11,8 @@ Pushes to main are automatically deployed on the [production server](https://sho
 ### Setup
 
 1. Clone the repo
-2. Copy .env.example to .env and configure accordingly (APP_URL, DB credentials, and APP_KEY (run `herd php artisan key:generate`))
-3. Install dependencies with `herd composer install`
+2. Install dependencies with `herd composer install`
+3. Copy .env.example to .env and configure accordingly (APP_URL, DB credentials, and APP_KEY (run `herd php artisan key:generate`))
 4. Install node dependencies with `herd php artisan npm:install`
 5. Run migrations to initialize your database with `herd php artisan migrate`
 6. Publish the assets with `herd php winter:mirror public --relative`
