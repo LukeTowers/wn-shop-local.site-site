@@ -1,3 +1,73 @@
-<p>This is the default markup for component ListRetailers</p>
+{% if title or description %}
+    <div class="p-8 pb-0 text-center bg-gray-100">
+        {% partial '@breadcrumbs' %}
+        {% if title %}
+            <h2 class="text-2xl font-extrabold text-gray-900 sm:text-3xl">
+                {{ title }}
+            </h2>
+        {% endif %}
+        {% if description %}
+            <p class="mt-4 text-lg leading-6 text-gray-500">
+                {{ description }}
+            </p>
+        {% endif %}
+    </div>
+{% endif %}
 
-<small>You can delete this file if you want</small>
+{% if related %}
+    <style>details > summary::-webkit-details-marker { display: none; }</style>
+    <details class="group">
+        <summary class="p-8 pb-0 text-center bg-gray-100 list-none" syle="list-style-type: none;">
+            <h3 class="inline-block align-middle text-xl font-bold text-gray-900 sm:text-2xl">Show {{ related.name }}</h3>
+            <span class="inline-block align-middle transition group-open:rotate-180">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+            </span>
+        </summary>
+        <ul class="group-open:animate-fadeIn flex flex-wrap items-center justify-center text-gray-900 bg-gray-100">
+            {% for record in related.records %}
+                <li
+                    class="text-underline p-2"
+                >
+                    <a href="{{ record.url }}">{{ record.title | title }}{% if record.count > 1 %} ({{ record.count }}){% endif %}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </details>
+{% endif %}
+
+<div class="py-8 px-2 bg-gray-100">
+    <ul role="list" class="flex flex-row flex-wrap">
+        {% for record in records %}
+            <li class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 pb-8 mx-auto">
+                {% partial '@record' record=record %}
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% if records.count() == 1 %}
+    {% set record = records.first() %}
+    {# {% if record.metadata.staff.members is not empty %}
+        <div class="py-8 px-2 bg-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 sm:text-2xl text-center pb-8">{{ record.staff_heading }}</h3>
+            <ul role="list" class="flex flex-row flex-wrap">
+                {% for member in record.metadata.staff.members %}
+                    <li class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 pb-8 mx-auto">
+                        {% partial '@member' member=member record=record %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+    {% if record.metadata.sponsoring_committee.members is not empty %}
+        <div class="py-8 px-2 bg-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 sm:text-2xl text-center pb-8">Sponsoring Commitee Executive</h3>
+            <ul role="list" class="flex flex-row flex-wrap">
+                {% for member in record.metadata.sponsoring_committee.members %}
+                    <li class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 pb-8 mx-auto">
+                        {% partial '@member' member=member record=record %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %} #}
+{% endif %}

@@ -2,7 +2,7 @@
 
 namespace ShopLocal\Core\Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
+use Winter\Storm\Database\Factories\Factory;
 
 /**
  * RetailerCategoryFactory Factory
@@ -17,8 +17,18 @@ class RetailerCategoryFactory extends Factory
      */
     public function definition()
     {
+        $categories = [
+            'Grocery', 'Clothing', 'Electronics', 'Furniture', 'Automotive',
+            'Pharmacy', 'Hardware', 'Books', 'Toys', 'Jewelry', 'Restaurants',
+            'Pet Supplies', 'Sporting Goods', 'Beauty & Personal Care', 'Home & Garden',
+            'Office Supplies', 'Outdoor & Camping', 'Baby & Kids', 'Health & Wellness',
+            'Music & Instruments', 'Art & Craft Supplies'
+        ];
+
         return [
-            //
+            'name' => $this->faker->unique()->randomElement($categories),
+            'created_at' => now(),
+            'updated_at' => now(),
         ];
     }
 }

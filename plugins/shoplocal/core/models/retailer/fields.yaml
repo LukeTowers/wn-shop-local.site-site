@@ -33,19 +33,19 @@ tabs:
             span: auto
             default: sk
             options:
-                "ab": "Alberta"
-                "bc": "British Columbia"
-                "mb": "Manitoba"
-                "nb": "New Brunswick"
-                "nl": "Newfoundland and Labrador"
-                "nt": "Northwest Territories"
-                "ns": "Nova Scotia"
-                "nu": "Nunavut"
-                "on": "Ontario"
-                "pe": "Prince Edward Island"
-                "qc": "Quebec"
-                "sk": "Saskatchewan"
-                "yt": "Yukon"
+                "AB": "Alberta"
+                "BC": "British Columbia"
+                "MB": "Manitoba"
+                "NB": "New Brunswick"
+                "NL": "Newfoundland and Labrador"
+                "NT": "Northwest Territories"
+                "NS": "Nova Scotia"
+                "NU": "Nunavut"
+                "ON": "Ontario"
+                "PE": "Prince Edward Island"
+                "QC": "Quebec"
+                "SK": "Saskatchewan"
+                "YT": "Yukon"
             tab: Contact
         lat:
             label: Latitude

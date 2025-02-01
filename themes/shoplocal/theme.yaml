@@ -5,10 +5,6 @@ homepage: "https://example.com"
 code: "shoplocal"
 form:
     fields:
-        googleanalytics_id:
-            label: themes.shoplocal::lang.options.googleanalytics_id
-            type: text
-            span: full
         color_primary:
             label: themes.shoplocal::lang.options.color_primary
             type: colorpicker

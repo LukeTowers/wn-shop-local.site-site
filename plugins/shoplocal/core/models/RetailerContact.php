@@ -2,7 +2,10 @@
 
 namespace ShopLocal\Core\Models;
 
+use ShopLocal\Core\Classes\Helpers\PhoneNumber;
+use Winter\Storm\Database\Factories\HasFactory;
 use Winter\Storm\Database\Model;
+use Winter\Storm\Support\Facades\Url;
 
 /**
  * RetailerContact Model
@@ -10,6 +13,7 @@ use Winter\Storm\Database\Model;
 class RetailerContact extends Model
 {
     use \Winter\Storm\Database\Traits\Validation;
+    use HasFactory;
 
     /**
      * @var string The database table used by the model.
@@ -80,4 +84,56 @@ class RetailerContact extends Model
     public $morphMany = [];
     public $attachOne = [];
     public $attachMany = [];
+
+    /**
+     * Query scope for types that are directly linkable
+     */
+    public function scopeUrl($query)
+    {
+        // @TODO: Filter out non-public contacts
+        return $query->whereIn('type', [
+            'facebook',
+            'instagram',
+            'twitter',
+            'youtube',
+            'website',
+            'tiktok',
+        ]);
+    }
+
+    /**
+     * Get phone number as E.164 format
+     */
+    public function getTelNumberAttribute(): ?string
+    {
+        if ($this->type !== 'phone') {
+            return null;
+        }
+
+        return PhoneNumber::parse($this->value);
+    }
+
+    /**
+     * Get directions URL for address
+     */
+    public function getDirectionsUrlAttribute(): ?string
+    {
+        if (!in_array($this->type, ['address'])) {
+            return null;
+        }
+
+        $address = urlencode($this->value);
+        return "https://www.google.com/maps/dir/Current+Location/{$address}";
+    }
+
+    /**
+     * Accessor for $this->icon_url
+     */
+    public function getIconUrlAttribute(): string
+    {
+        $type = $this->type;
+        $icon = 'plugins/shoplocal/core/assets/icons/' . $type . '.svg';
+
+        return Url::asset($icon);
+    }
 }

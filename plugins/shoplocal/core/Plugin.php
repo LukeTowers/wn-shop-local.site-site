@@ -4,6 +4,7 @@ namespace ShopLocal\Core;
 
 use Backend;
 use Backend\Models\UserRole;
+use ShopLocal\Core\Components\ListRetailers;
 use System\Classes\PluginBase;
 
 /**
@@ -46,7 +47,7 @@ class Plugin extends PluginBase
     public function registerComponents(): array
     {
         return [
-            \ShopLocal\Core\Components\ListRetailers::class => 'listRetailers',
+            ListRetailers::class => 'listRetailers',
         ];
     }
 
@@ -56,7 +57,7 @@ class Plugin extends PluginBase
     public function registerPermissions(): array
     {
         return [
-            'shoplocal.core.manage_retailers' => [
+            'shoplocal.core.retailers.manage_all' => [
                 'tab' => 'shoplocal.core::lang.plugin.name',
                 'label' => 'shoplocal.core::lang.permissions.manage_retailers',
                 'roles' => [UserRole::CODE_DEVELOPER, UserRole::CODE_PUBLISHER],

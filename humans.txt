@@ -1,0 +1,4 @@
+/* TEAM */
+Thanks to Luke for the role of Tech Lead.
+Thanks to Kos for the role of Frontend Developer.
+Thanks to Amama for the role of Frontend Developer.
