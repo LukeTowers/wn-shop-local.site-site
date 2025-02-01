@@ -1,25 +1,25 @@
 /* General Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #5C6BC0, #af86e9); /* Gradient background */
+    background: linear-gradient(135deg, #5C6BC0, #af86e9);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     color: #333;
+    padding: 20px;
 }
 
-/* Container for the sign-in form */
-.signin-container {
+/* Form Container */
+.form-container {
     background: #fff;
     padding: 2.5rem;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px;
-    text-align: center;
-    animation: fadeIn 0.5s ease-in-out; /* Fade-in animation */
+    max-width: 800px;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -33,65 +33,85 @@ body {
     }
 }
 
-/* Welcome message */
-.welcome-message {
-    font-size: 2.2rem;
+/* Headings */
+h1 {
+    font-size: 2.5rem;
     color: #333;
     margin-bottom: 0.5rem;
-    font-weight: 600;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 0.5rem;
 }
 
 .subtext {
     color: #666;
+    font-size: 1rem;
+    text-align: center;
     margin-bottom: 2rem;
-    font-size: 0.95rem;
 }
 
-/* Input groups */
+/* Input Groups */
 .input-group {
     margin-bottom: 1.5rem;
-    text-align: left;
-    position: relative;
 }
 
 .input-group label {
     display: block;
     margin-bottom: 0.5rem;
     color: #555;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 500;
 }
 
-.input-group input {
-    width: 80%;
+.input-group input,
+.input-group textarea,
+.input-group select {
+    width: 100%;
     padding: 0.75rem;
     border: 1px solid #ddd;
     border-radius: 8px;
     font-size: 1rem;
-    padding-left: 2.5rem; /* Space for icons */
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.input-group input:focus {
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus {
     border-color: #007bff;
     box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
     outline: none;
 }
 
-.input-icon {
-    position: absolute;
-    left: 10px;
-    top: 66%;
-    transform: translateY(-50%);
-    color: #888;
-    font-size: 1rem;
+.input-group textarea {
+    resize: vertical;
 }
 
-/* Submit button */
+/* Checkbox Group */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Submit Button */
 .submit-btn {
     width: 100%;
     padding: 0.75rem;
-    background-color: #5C6BC0;
+    background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -103,51 +123,28 @@ body {
 
 .submit-btn:hover {
     background-color: #0056b3;
-    transform: translateY(-2px); /* Slight lift on hover */
+    transform: translateY(-2px);
 }
 
 .submit-btn:active {
-    transform: translateY(0); /* Reset on click */
-}
-
-/* Sign-up link */
-.signup-link {
-    margin-top: 1.5rem;
-    color: #666;
-    font-size: 0.9rem;
-}
-
-.signup-link a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.signup-link a:hover {
-    color: #0056b3;
-    text-decoration: underline;
+    transform: translateY(0);
 }
 
 /* Responsive Design */
-@media (max-width: 480px) {
-    .signin-container {
+@media (max-width: 768px) {
+    .form-container {
         padding: 1.5rem;
     }
 
-    .welcome-message {
-        font-size: 1.8rem;
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
     }
 
     .subtext {
-        font-size: 0.85rem;
-    }
-
-    .input-group input {
-        padding-left: 2.2rem;
-    }
-
-    .input-icon {
         font-size: 0.9rem;
     }
 }

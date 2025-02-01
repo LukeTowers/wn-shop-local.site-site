@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Account - Retailer Registration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Create Your Account</h1>
+        <p class="subtext">Join our platform and showcase your business to the world.</p>
+
+        <form class="retailer-form">
+            <!-- Business Information -->
+            <div class="form-section">
+                <h2>Business Information</h2>
+                <div class="input-group">
+                    <label for="business-name">Business Name:</label>
+                    <input type="text" id="business-name" name="business-name" placeholder="Enter your business name" required>
+                </div>
+                <div class="input-group">
+                    <label for="first-name">Legal First Name:</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+                </div>
+                <div class="input-group">
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+                </div>
+                <div class="input-group">
+                    <label for="logo">Business Logo:</label>
+                    <input type="file" id="logo" name="logo" accept="image/*">
+                </div>
+            </div>
+
+            <!-- Address Information -->
+            <div class="form-section">
+                <h2>Address Information</h2>
+                <div class="input-group">
+                    <label for="street-address">Street Address:</label>
+                    <input type="text" id="street-address" name="street-address" placeholder="Enter your street address" required>
+                </div>
+                <div class="input-group">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                </div>
+                <div class="input-group">
+                    <label for="province-state">Province/State:</label>
+                    <input type="text" id="province-state" name="province-state" placeholder="Enter your province/state" required>
+                </div>
+                <div class="input-group">
+                    <label for="postal-zip-code">Postal/Zip Code:</label>
+                    <input type="text" id="postal-zip-code" name="postal-zip-code" placeholder="Enter your postal/zip code" required>
+                </div>
+            </div>
+
+            <!-- Business Description -->
+            <div class="form-section">
+                <h2>Business Description</h2>
+                <div class="input-group">
+                    <label for="business-description">Brief Description:</label>
+                    <textarea id="business-description" name="business-description" rows="4" placeholder="Describe your business and products/services" required></textarea>
+                </div>
+            </div>
+
+            <!-- Payment Gateway -->
+            <div class="form-section">
+                <h2>Preferred Payment Gateway</h2>
+                <div class="input-group">
+                    <label for="payment-gateway">Select Payment Gateway:</label>
+                    <select id="payment-gateway" name="payment-gateway" required>
+                        <option value="">Select an option</option>
+                        <option value="stripe">Stripe</option>
+                        <option value="square">Square</option>
+                        <option value="paypal">PayPal</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Product Categories -->
+            <div class="form-section">
+                <h2>Primary Product Categories</h2>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="product-category" value="clothing"> Clothing</label>
+                    <label><input type="checkbox" name="product-category" value="footwear"> Footwear</label>
+                    <label><input type="checkbox" name="product-category" value="accessories"> Accessories</label>
+                    <label><input type="checkbox" name="product-category" value="electronics"> Electronics</label>
+                    <label><input type="checkbox" name="product-category" value="food-beverage"> Food & Beverage</label>
+                    <label><input type="checkbox" name="product-category" value="beauty"> Beauty & Personal Care</label>
+                    <label><input type="checkbox" name="product-category" value="gifts"> Gifts</label>
+                    <label><input type="checkbox" name="product-category" value="other"> Other (Please specify):</label>
+                    <input type="text" id="other-category" name="other-category" placeholder="Specify other category">
+                </div>
+            </div>
+
+            <!-- Legal & Compliance -->
+            <div class="form-section">
+                <h2>Legal & Compliance</h2>
+                <div class="input-group">
+                    <label for="license-number">Business License/Registration Number:</label>
+                    <input type="text" id="license-number" name="license-number" placeholder="Enter your license/registration number">
+                </div>
+            </div>
+
+            <!-- Optional Information -->
+            <div class="form-section">
+                <h2>Optional Information</h2>
+                <div class="input-group">
+                    <label for="website-url">Website URL:</label>
+                    <input type="url" id="website-url" name="website-url" placeholder="Enter your website URL">
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-section">
+                <button type="submit" class="submit-btn">Create Account</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
