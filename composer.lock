@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8a874b1cda8b71fd08b8d7783ba69fe7",
+    "content-hash": "6d628ff7186543d5c6da811abfa9e3cd",
     "packages": [
         {
             "name": "assetic/framework",
@@ -2440,6 +2440,50 @@
                 }
             ],
             "time": "2024-09-21T08:32:55+00:00"
+        },
+        {
+            "name": "luketowers/wn-easyaudit-plugin",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LukeTowers/wn-easyaudit-plugin.git",
+                "reference": "b982207a7f9558493d2dbe90981308dc5a473f2a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LukeTowers/wn-easyaudit-plugin/zipball/b982207a7f9558493d2dbe90981308dc5a473f2a",
+                "reference": "b982207a7f9558493d2dbe90981308dc5a473f2a",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "winter-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Luke Towers",
+                    "email": "wintercms@luketowers.ca"
+                }
+            ],
+            "description": "View and manage audit logs for models within your Winter CMS projects",
+            "homepage": "https://github.com/LukeTowers/wn-easyaudit-plugin",
+            "keywords": [
+                "Audit",
+                "activity",
+                "easy audit",
+                "laravel",
+                "logging",
+                "logs",
+                "winter",
+                "wintercms"
+            ],
+            "support": {
+                "issues": "https://github.com/LukeTowers/wn-easyaudit-plugin/issues",
+                "source": "https://github.com/LukeTowers/wn-easyaudit-plugin/tree/main"
+            },
+            "time": "2024-10-29T09:03:46+00:00"
         },
         {
             "name": "maatwebsite/excel",
@@ -10372,6 +10416,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "luketowers/wn-easyaudit-plugin": 20,
         "winter/wn-debugbar-plugin": 20,
         "winter/wn-excel-plugin": 20,
         "winter/wn-ignition-plugin": 20,

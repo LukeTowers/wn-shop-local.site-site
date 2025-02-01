@@ -23,7 +23,8 @@
         "winter/wn-tailwindui-plugin": "dev-main",
         "winter/wn-seo-plugin": "dev-main",
         "winter/wn-sitemap-plugin": "dev-main",
-        "winter/wn-excel-plugin": "dev-main"
+        "winter/wn-excel-plugin": "dev-main",
+        "luketowers/wn-easyaudit-plugin": "dev-main"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5.8",

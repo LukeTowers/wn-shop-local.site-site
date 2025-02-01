@@ -18,6 +18,11 @@ class Retailer extends Model
     public $table = 'shoplocal_core_retailers';
 
     /**
+     * @var array Behaviors implemented by this model class
+     */
+    public $implement = ['@LukeTowers.EasyAudit.Behaviors.TrackableModel'];
+
+    /**
      * @var array Guarded fields
      */
     protected $guarded = ['*'];

@@ -45,10 +45,8 @@ class Plugin extends PluginBase
      */
     public function registerComponents(): array
     {
-        return []; // Remove this line to activate
-
         return [
-            \ShopLocal\Core\Components\MyComponent::class => 'myComponent',
+            \ShopLocal\Core\Components\ListRetailers::class => 'listRetailers',
         ];
     }
 
@@ -57,12 +55,10 @@ class Plugin extends PluginBase
      */
     public function registerPermissions(): array
     {
-        return []; // Remove this line to activate
-
         return [
-            'shoplocal.core.some_permission' => [
+            'shoplocal.core.manage_retailers' => [
                 'tab' => 'shoplocal.core::lang.plugin.name',
-                'label' => 'shoplocal.core::lang.permissions.some_permission',
+                'label' => 'shoplocal.core::lang.permissions.manage_retailers',
                 'roles' => [UserRole::CODE_DEVELOPER, UserRole::CODE_PUBLISHER],
             ],
         ];

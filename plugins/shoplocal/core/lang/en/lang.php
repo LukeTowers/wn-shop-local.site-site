@@ -6,7 +6,7 @@ return [
         'description' => 'No description provided yet...',
     ],
     'permissions' => [
-        'some_permission' => 'Some permission',
+        'manage_retailers' => 'Manage Retailers',
     ],
     'models' => [
         'general' => [
