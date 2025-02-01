@@ -56,7 +56,7 @@ class Plugin extends PluginBase
     public function registerPermissions(): array
     {
         return [
-            'shoplocal.core.manage_retailers' => [
+            'shoplocal.core.retailers.manage_all' => [
                 'tab' => 'shoplocal.core::lang.plugin.name',
                 'label' => 'shoplocal.core::lang.permissions.manage_retailers',
                 'roles' => [UserRole::CODE_DEVELOPER, UserRole::CODE_PUBLISHER],

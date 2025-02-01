@@ -20,7 +20,7 @@ class RetailerCategories extends Controller
      * @var array Permissions required to view this page.
      */
     protected $requiredPermissions = [
-        'shoplocal.core.retailercategories.manage_all',
+        'shoplocal.core.retailers.manage_all',
     ];
 
     public function __construct()
